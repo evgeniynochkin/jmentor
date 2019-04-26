@@ -11,7 +11,9 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.tomcat</groupId>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat9-maven-plugin</artifactId>
+                <version></version>
             </plugin>
         </plugins>
     </build>
