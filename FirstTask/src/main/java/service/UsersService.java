@@ -1,10 +1,10 @@
-package dao;
+package service;
 
 import model.UsersDataSet;
 
 import java.util.List;
 
-public interface UsersDAO {
+public interface UsersService {
 
     public void addUser(UsersDataSet uds);
 

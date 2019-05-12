@@ -1,4 +1,4 @@
-package dataset;
+package model;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -10,54 +10,54 @@ import java.io.Serializable;
  */
 
 @Entity
-@Table(name = "user")
+@Table(name = "USERS")
 public class UsersDataSet implements Serializable {
 
     private static final long serialVersionUID = -8706689714326132798L;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "login", unique = true, updatable = false)
+    @Column(name = "LOGIN", unique = true, updatable = false)
     private String login;
 
-    @Column(name = "password", unique = true, updatable = true)
+    @Column(name = "PASSWORD", unique = true, updatable = true)
     private String password;
 
-    @Column(name = "name", unique = false, updatable = true)
+    @Column(name = "NAME", unique = false, updatable = true)
     private String name;
 
     @SuppressWarnings("UnusedDeclaration")
     public UsersDataSet() {}
 
-    @SuppressWarnings("UnusedDeclaration")
-    public UsersDataSet(long id, String login) {
-        this.setId(id);
-        this.setLogin(login);
-    }
-
-    @SuppressWarnings("UnusedDeclaration")
-    public UsersDataSet(long id, String login, String password) {
-        this.setId(id);
-        this.setLogin(login);
-        this.setPassword(password);
-    }
-
-    public UsersDataSet(String login, String password) {
-        this.setId(-1);
-        this.setLogin(login);
-        this.setPassword(password);
-        this.setName(login);
-    }
-
-    public UsersDataSet(String login, String password, String name) {
-        this.setId(-1);
-        this.setLogin(login);
-        this.setPassword(password);
-        this.setName(name);
-    }
+//    @SuppressWarnings("UnusedDeclaration")
+//    public UsersDataSet(long id, String login) {
+//        this.setId(id);
+//        this.setLogin(login);
+//    }
+//
+//    @SuppressWarnings("UnusedDeclaration")
+//    public UsersDataSet(long id, String login, String password) {
+//        this.setId(id);
+//        this.setLogin(login);
+//        this.setPassword(password);
+//    }
+//
+//    public UsersDataSet(String login, String password) {
+//        this.setId(-1);
+//        this.setLogin(login);
+//        this.setPassword(password);
+//        this.setName(login);
+//    }
+//
+//    public UsersDataSet(String login, String password, String name) {
+//        this.setId(-1);
+//        this.setLogin(login);
+//        this.setPassword(password);
+//        this.setName(name);
+//    }
 
     public void setId(long id) { this.id = id; }
 
