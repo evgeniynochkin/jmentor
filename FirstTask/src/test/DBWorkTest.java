@@ -1,4 +1,5 @@
 import exception.DBException;
+import model.UsersDataSet;
 import org.junit.Before;
 import org.junit.Test;
 import service.UsersService;
@@ -15,20 +16,23 @@ public class DBWorkTest {
         usersService = new UsersServiceImpl();
     }
 
-//    //создание пользователя без имени
-//    @Test
-//    public void addNewUserWhithoutName() throws DBException {
-//        try {
-//            long userId = dbService.addUserWithoutName("max1", "pas1");
-//            System.out.println("Added user id: " + userId);
-////            UsersDataSet user = dbService.getUser(userId);
-////            UsersDataSet expected = new UsersDataSet("max1", "pas1");
-//
-////            assertTrue("Пользователь не создан", user != expected);
-//        } catch (DBException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    //создание пользователя без имени
+    @Test
+    public void addNewUserWhithoutName() throws DBException {
+        try {
+            UsersDataSet uds = new UsersDataSet();
+            uds.setId(1);
+            uds.setLogin("first");
+            uds.setPassword("111");
+            uds.setName("first");
+
+            UsersServiceImpl usl = new UsersServiceImpl();
+            usl.addUser(uds);
+
+        } catch (DBException e) {
+            e.printStackTrace();
+        }
+    }
 
 //    //создание пользователя с имененм
 //    @Test

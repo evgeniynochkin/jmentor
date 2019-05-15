@@ -1,19 +1,22 @@
 package service;
 
-import dao.UsersDAO;
+import dao.UsersDAOImpl;
+import exception.DBException;
 import model.UsersDataSet;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import property.DBproperty;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 public class UsersServiceImpl implements UsersService {
 
-    private UsersDAO usersDAO;
+    private UsersDAOImpl usersDAOImpl;
 
     private final SessionFactory sessionFactory;
 
@@ -22,33 +25,80 @@ public class UsersServiceImpl implements UsersService {
         sessionFactory = createSessionFactory(configuration);
     }
 
-    public void setUsersDAO(UsersDAO usersDAO) {
-        this.usersDAO = usersDAO;
+    public void setUsersDAO(UsersDAOImpl usersDAO) {
+            this.usersDAOImpl = usersDAOImpl;
     }
 
     @Override
-    public void addUser(UsersDataSet uds) {
-        this.usersDAO.addUser(uds);
+    public void addUser(UsersDataSet uds) throws DBException {
+        try {
+            Session session = sessionFactory.openSession();
+            Transaction transaction =session.beginTransaction();
+            this.usersDAOImpl.setSession(session);
+            this.usersDAOImpl.addUser(uds);
+            transaction.commit();
+            session.close();
+        } catch (HibernateException e) {
+            throw new DBException(e);
+        }
     }
 
     @Override
-    public void updateUser(UsersDataSet uds) {
-        this.usersDAO.updateUser(uds);
+    public void updateUser(UsersDataSet uds) throws DBException {
+        try {
+            Session session = sessionFactory.openSession();
+            Transaction transaction = session.beginTransaction();
+            this.usersDAOImpl.setSession(session);
+            this.usersDAOImpl.updateUser(uds);
+            transaction.commit();
+            session.close();
+        } catch (HibernateException e) {
+            throw new DBException(e);
+        }
     }
 
     @Override
-    public void removeUser(int id) {
-        this.usersDAO.removeUser(id);
+    public void removeUser(int id) throws DBException {
+        try {
+            Session session = sessionFactory.openSession();
+            Transaction transaction = session.beginTransaction();
+            this.usersDAOImpl.setSession(session);
+            this.usersDAOImpl.removeUser(id);
+            transaction.commit();
+            session.close();
+        } catch (HibernateException e) {
+            throw new DBException(e);
+        }
     }
 
     @Override
-    public UsersDataSet getUserById(int id) {
-        return this.usersDAO.getUserById(id);
+    public UsersDataSet getUserById(int id) throws DBException {
+        try {
+            Session session = sessionFactory.openSession();
+            Transaction transaction = session.beginTransaction();
+            this.usersDAOImpl.setSession(session);
+            UsersDataSet uds = this.usersDAOImpl.getUserById(id);
+            transaction.commit();
+            session.close();
+            return uds;
+        } catch (HibernateException e) {
+            throw new DBException(e);
+        }
     }
 
     @Override
-    public List<UsersDataSet> listUsers() {
-        return this.usersDAO.listUsers();
+    public List<UsersDataSet> listUsers() throws DBException {
+        try {
+            Session session = sessionFactory.openSession();
+            Transaction transaction = session.beginTransaction();
+            this.usersDAOImpl.setSession(session);
+            List<UsersDataSet> uds = this.usersDAOImpl.listUsers();
+            transaction.commit();
+            session.close();
+            return uds;
+        } catch (HibernateException e) {
+            throw new DBException(e);
+        }
     }
 
     private static SessionFactory createSessionFactory(Configuration configuration) {
