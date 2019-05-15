@@ -32,32 +32,6 @@ public class UsersDataSet implements Serializable {
     @SuppressWarnings("UnusedDeclaration")
     public UsersDataSet() {}
 
-//    @SuppressWarnings("UnusedDeclaration")
-//    public UsersDataSet(long id, String login) {
-//        this.setId(id);
-//        this.setLogin(login);
-//    }
-//
-//    @SuppressWarnings("UnusedDeclaration")
-//    public UsersDataSet(long id, String login, String password) {
-//        this.setId(id);
-//        this.setLogin(login);
-//        this.setPassword(password);
-//    }
-//
-//    public UsersDataSet(String login, String password) {
-//        this.setId(-1);
-//        this.setLogin(login);
-//        this.setPassword(password);
-//        this.setName(login);
-//    }
-//
-//    public UsersDataSet(String login, String password, String name) {
-//        this.setId(-1);
-//        this.setLogin(login);
-//        this.setPassword(password);
-//        this.setName(name);
-//    }
 
     public void setId(long id) { this.id = id; }
 

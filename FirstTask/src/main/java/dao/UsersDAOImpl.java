@@ -11,7 +11,7 @@ import java.util.List;
  * @since 1.1
  */
 
-@Repository
+//@Repository
 public class UsersDAOImpl implements UsersDAO {
 
     private Session session;
@@ -22,19 +22,16 @@ public class UsersDAOImpl implements UsersDAO {
 
     @Override
     public void addUser(UsersDataSet uds) {
-        Session session = this.session.getSession();
         session.persist(uds);
     }
 
     @Override
     public void updateUser(UsersDataSet uds) {
-        Session session = this.session.getSession();
         session.update(uds);
     }
 
     @Override
     public void removeUser(int id) {
-        Session session = this.session.getSession();
         UsersDataSet uds = (UsersDataSet) session.load(UsersDataSet.class, new Integer(id));
 
         if(uds!=null) {
@@ -44,7 +41,6 @@ public class UsersDAOImpl implements UsersDAO {
 
     @Override
     public UsersDataSet getUserById(int id) {
-        Session session = this.session.getSession();
         UsersDataSet uds = (UsersDataSet) session.load(UsersDataSet.class, new Integer(id));
         return uds;
     }
@@ -52,7 +48,6 @@ public class UsersDAOImpl implements UsersDAO {
     @Override
     @SuppressWarnings("unchecked")
     public List<UsersDataSet> listUsers() {
-        Session session = this.session.getSession();
         List<UsersDataSet> usersList = session.createQuery("from USERS").list();
         return usersList;
     }

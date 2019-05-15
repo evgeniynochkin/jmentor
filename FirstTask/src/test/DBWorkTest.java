@@ -1,33 +1,34 @@
 import exception.DBException;
 import org.junit.Before;
 import org.junit.Test;
-import service.DBService;
+import service.UsersService;
+import service.UsersServiceImpl;
 
 import static org.junit.Assert.assertTrue;
 
 public class DBWorkTest {
 
-    DBService dbService;
+    UsersService usersService;
 
     @Before
     public void init() {
-        dbService = new DBService();
+        usersService = new UsersServiceImpl();
     }
 
-    //создание пользователя без имени
-    @Test
-    public void addNewUserWhithoutName() throws DBException {
-        try {
-            long userId = dbService.addUserWithoutName("max1", "pas1");
-            System.out.println("Added user id: " + userId);
-//            UsersDataSet user = dbService.getUser(userId);
-//            UsersDataSet expected = new UsersDataSet("max1", "pas1");
-
-//            assertTrue("Пользователь не создан", user != expected);
-        } catch (DBException e) {
-            e.printStackTrace();
-        }
-    }
+//    //создание пользователя без имени
+//    @Test
+//    public void addNewUserWhithoutName() throws DBException {
+//        try {
+//            long userId = dbService.addUserWithoutName("max1", "pas1");
+//            System.out.println("Added user id: " + userId);
+////            UsersDataSet user = dbService.getUser(userId);
+////            UsersDataSet expected = new UsersDataSet("max1", "pas1");
+//
+////            assertTrue("Пользователь не создан", user != expected);
+//        } catch (DBException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 //    //создание пользователя с имененм
 //    @Test
