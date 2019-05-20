@@ -25,16 +25,12 @@ public class UsersServiceImpl implements UsersService {
         sessionFactory = createSessionFactory(configuration);
     }
 
-    public void setUsersDAO(UsersDAOImpl usersDAO) {
-            this.usersDAOImpl = usersDAOImpl;
-    }
-
     @Override
     public void addUser(UsersDataSet uds) throws DBException {
         try {
             Session session = sessionFactory.openSession();
-            Transaction transaction =session.beginTransaction();
-            this.usersDAOImpl.setSession(session);
+            Transaction transaction = session.beginTransaction();
+            usersDAOImpl = new UsersDAOImpl(session);
             this.usersDAOImpl.addUser(uds);
             transaction.commit();
             session.close();
@@ -48,7 +44,7 @@ public class UsersServiceImpl implements UsersService {
         try {
             Session session = sessionFactory.openSession();
             Transaction transaction = session.beginTransaction();
-            this.usersDAOImpl.setSession(session);
+            usersDAOImpl = new UsersDAOImpl(session);
             this.usersDAOImpl.updateUser(uds);
             transaction.commit();
             session.close();
@@ -62,7 +58,7 @@ public class UsersServiceImpl implements UsersService {
         try {
             Session session = sessionFactory.openSession();
             Transaction transaction = session.beginTransaction();
-            this.usersDAOImpl.setSession(session);
+            usersDAOImpl = new UsersDAOImpl(session);
             this.usersDAOImpl.removeUser(id);
             transaction.commit();
             session.close();
@@ -76,7 +72,7 @@ public class UsersServiceImpl implements UsersService {
         try {
             Session session = sessionFactory.openSession();
             Transaction transaction = session.beginTransaction();
-            this.usersDAOImpl.setSession(session);
+            usersDAOImpl = new UsersDAOImpl(session);
             UsersDataSet uds = this.usersDAOImpl.getUserById(id);
             transaction.commit();
             session.close();
@@ -91,7 +87,7 @@ public class UsersServiceImpl implements UsersService {
         try {
             Session session = sessionFactory.openSession();
             Transaction transaction = session.beginTransaction();
-            this.usersDAOImpl.setSession(session);
+            usersDAOImpl = new UsersDAOImpl(session);
             List<UsersDataSet> uds = this.usersDAOImpl.listUsers();
             transaction.commit();
             session.close();

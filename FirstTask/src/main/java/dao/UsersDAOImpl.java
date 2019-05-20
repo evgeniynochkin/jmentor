@@ -1,6 +1,7 @@
 package dao;
 
 import model.UsersDataSet;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
 import java.util.List;
@@ -14,22 +15,22 @@ public class UsersDAOImpl implements UsersDAO {
 
     private Session session;
 
-    public void setSession(Session session) {
+    public UsersDAOImpl(Session session) {
         this.session = session;
     }
 
     @Override
-    public void addUser(UsersDataSet uds) {
-        session.persist(uds);
+    public long addUser(UsersDataSet uds) throws HibernateException {
+        return (Long) session.save(uds);
     }
 
     @Override
-    public void updateUser(UsersDataSet uds) {
+    public void updateUser(UsersDataSet uds) throws HibernateException {
         session.update(uds);
     }
 
     @Override
-    public void removeUser(int id) {
+    public void removeUser(int id) throws HibernateException {
         UsersDataSet uds = (UsersDataSet) session.load(UsersDataSet.class, new Integer(id));
 
         if(uds!=null) {
@@ -38,14 +39,14 @@ public class UsersDAOImpl implements UsersDAO {
     }
 
     @Override
-    public UsersDataSet getUserById(int id) {
+    public UsersDataSet getUserById(int id) throws HibernateException {
         UsersDataSet uds = (UsersDataSet) session.load(UsersDataSet.class, new Integer(id));
         return uds;
     }
 
     @Override
     @SuppressWarnings("unchecked")
-    public List<UsersDataSet> listUsers() {
+    public List<UsersDataSet> listUsers() throws HibernateException {
         List<UsersDataSet> usersList = session.createQuery("from USERS").list();
         return usersList;
     }

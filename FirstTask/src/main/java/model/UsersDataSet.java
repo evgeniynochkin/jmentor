@@ -1,7 +1,6 @@
 package model;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 /**
  * @author Evgeniy Nochkin
@@ -29,7 +28,6 @@ public class UsersDataSet {
 
     @SuppressWarnings("UnusedDeclaration")
     public UsersDataSet() {}
-
 
     public void setId(long id) { this.id = id; }
 
