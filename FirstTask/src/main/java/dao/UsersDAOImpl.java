@@ -3,6 +3,8 @@ package dao;
 import model.UsersDataSet;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
+import service.HibernateSessionFactory;
 
 import java.util.List;
 
@@ -13,41 +15,51 @@ import java.util.List;
 
 public class UsersDAOImpl implements UsersDAO {
 
-    private Session session;
-
-    public UsersDAOImpl(Session session) {
-        this.session = session;
-    }
-
     @Override
-    public long addUser(UsersDataSet uds) throws HibernateException {
-        return (Long) session.save(uds);
+    public void addUser(UsersDataSet uds) throws HibernateException {
+        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        session.save(uds);
+        transaction.commit();
+        session.close();
     }
 
     @Override
     public void updateUser(UsersDataSet uds) throws HibernateException {
+        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
         session.update(uds);
+        transaction.commit();
+        session.close();
     }
 
     @Override
     public void removeUser(int id) throws HibernateException {
+        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
         UsersDataSet uds = (UsersDataSet) session.load(UsersDataSet.class, new Integer(id));
 
         if(uds!=null) {
             session.delete(uds);
         }
+        transaction.commit();
+        session.close();
     }
 
     @Override
     public UsersDataSet getUserById(int id) throws HibernateException {
+        Session session = HibernateSessionFactory.getSessionFactory().openSession();
         UsersDataSet uds = (UsersDataSet) session.load(UsersDataSet.class, new Integer(id));
+        session.close();
         return uds;
     }
 
     @Override
     @SuppressWarnings("unchecked")
     public List<UsersDataSet> listUsers() throws HibernateException {
+        Session session = HibernateSessionFactory.getSessionFactory().openSession();
         List<UsersDataSet> usersList = session.createQuery("from USERS").list();
+        session.close();
         return usersList;
     }
 }

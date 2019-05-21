@@ -21,7 +21,6 @@ public class DBWorkTest {
     public void addNewUserWhithoutName() throws DBException {
         try {
             UsersDataSet uds = new UsersDataSet();
-            //uds.setId(1);
             uds.setLogin("first");
             uds.setPassword("111");
             uds.setName("first");

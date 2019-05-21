@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UsersDAO {
 
-    public long addUser(UsersDataSet uds);
+    public void addUser(UsersDataSet uds);
 
     public void updateUser(UsersDataSet uds);
 
