@@ -8,9 +8,9 @@ public class Main {
 
         UserService userService = new UserServiceImpl();
         UserDataSet uds = new UserDataSet();
-        uds.setName("fff");
-        uds.setLogin("FFF");
-        uds.setPassword("pass");
+        uds.setName("fff2");
+        uds.setLogin("FFF2");
+        uds.setPassword("pass2");
         userService.addUser(uds);
     }
 }

@@ -12,9 +12,10 @@ public class DBProperty {
     public Configuration H2Configuratio() {
         configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
         configuration.setProperty("hibernate.connection.driver_class", "org.h2.Driver");
-        configuration.setProperty("hibernate.connection.url", "jdbc:h2:./h2db");
-        configuration.setProperty("hibernate.connection.username", "tully");
-        configuration.setProperty("hibernate.connection.password", "tully");
+//        configuration.setProperty("hibernate.connection.url", "jdbc:h2:./h2db");
+        configuration.setProperty("hibernate.connection.url", "jdbc:h2:/c:/projects/db");
+        configuration.setProperty("hibernate.connection.username", "");
+        configuration.setProperty("hibernate.connection.password", "");
         configuration.setProperty("hibernate.show_sql", hibernate_show_sql);
         configuration.setProperty("hibernate.hbm2ddl.auto", hibernate_hbm2ddl_auto);
         return configuration;
