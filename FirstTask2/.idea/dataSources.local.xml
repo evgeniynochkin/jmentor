@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="DB.mv.db" uuid="ce4fffe6-9663-41d5-a9b9-0edee7aed9c4">
-      <database-info product="H2" version="1.4.196 (2017-06-10)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.4.196 (2017-06-10)" dbms="H2" exact-version="1.4.196" exact-driver-version="1.4">
+    <data-source name="ft" uuid="3f8a7bce-f675-4959-805a-b625e1eefeea">
+      <database-info product="PostgreSQL" version="10.8" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="10.8" exact-driver-version="42.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
-      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
       <introspection-schemas>@:@</introspection-schemas>
     </data-source>
   </component>

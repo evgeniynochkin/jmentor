@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="DB.mv.db" uuid="ce4fffe6-9663-41d5-a9b9-0edee7aed9c4">
-      <driver-ref>h2.unified</driver-ref>
+    <data-source source="LOCAL" name="ft" uuid="3f8a7bce-f675-4959-805a-b625e1eefeea">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.h2.Driver</jdbc-driver>
-      <jdbc-url>jdbc:h2:$PROJECT_DIR$/../../../DB.mv.db</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/ft</jdbc-url>
     </data-source>
   </component>
 </project>

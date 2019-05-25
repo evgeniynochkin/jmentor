@@ -1,6 +1,5 @@
 package property;
 
-import model.UserDataSet;
 import org.hibernate.cfg.Configuration;
 
 public class DBProperty {
@@ -10,12 +9,11 @@ public class DBProperty {
     Configuration configuration = new Configuration();
 
     public Configuration H2Configuratio() {
-        configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-        configuration.setProperty("hibernate.connection.driver_class", "org.h2.Driver");
-//        configuration.setProperty("hibernate.connection.url", "jdbc:h2:./h2db");
-        configuration.setProperty("hibernate.connection.url", "jdbc:h2:/c:/projects/db");
-        configuration.setProperty("hibernate.connection.username", "");
-        configuration.setProperty("hibernate.connection.password", "");
+        configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQL10Dialect");
+        configuration.setProperty("hibernate.connection.driver_class", "org.postgresql.Driver");
+        configuration.setProperty("hibernate.connection.url", "jdbc:postgresql://localhost:5432/ft");
+        configuration.setProperty("hibernate.connection.username", "postgres");
+        configuration.setProperty("hibernate.connection.password", "1111");
         configuration.setProperty("hibernate.show_sql", hibernate_show_sql);
         configuration.setProperty("hibernate.hbm2ddl.auto", hibernate_hbm2ddl_auto);
         return configuration;
