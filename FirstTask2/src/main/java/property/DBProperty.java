@@ -1,5 +1,6 @@
 package property;
 
+import model.UserDataSet;
 import org.hibernate.cfg.Configuration;
 
 public class DBProperty {
@@ -16,6 +17,8 @@ public class DBProperty {
         configuration.setProperty("hibernate.connection.password", "1111");
         configuration.setProperty("hibernate.show_sql", hibernate_show_sql);
         configuration.setProperty("hibernate.hbm2ddl.auto", hibernate_hbm2ddl_auto);
+
+        configuration.addAnnotatedClass(UserDataSet.class);
         return configuration;
     }
 }

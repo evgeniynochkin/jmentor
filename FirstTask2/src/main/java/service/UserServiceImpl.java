@@ -5,25 +5,43 @@ import DAO.UserDAOImpl;
 import exception.DBException;
 import model.UserDataSet;
 
+import java.util.List;
+
 public class UserServiceImpl implements UserService {
 
     private UserDAO userDAO = new UserDAOImpl();
 
     public UserServiceImpl() {}
 
-    public void addUser(UserDataSet uds) throws DBException {
+    @Override
+    public String addUser(UserDataSet uds) throws DBException {
+        List<UserDataSet> lUsers = findAllUsers();
+        for (UserDataSet user : lUsers) {
+            if (user.getName().equals(uds.getName())) {
+                return "Такой пользователь уже существует";
+            }
+        }
         userDAO.addUser(uds);
+        return "Пользователь добавлен";
     }
 
+    @Override
     public void updateUser(UserDataSet uds) throws DBException {
 
     }
 
+    @Override
     public void removeUser(int id) throws DBException {
 
     }
 
-    public UserDataSet getUserById(int id) throws DBException {
-        return null;
+    @Override
+    public UserDataSet getUserByLogin(String login) throws DBException {
+        return userDAO.getUserByLogin(login);
+    }
+
+    @Override
+    public List<UserDataSet> findAllUsers() throws DBException {
+        return userDAO.findAll();
     }
 }
