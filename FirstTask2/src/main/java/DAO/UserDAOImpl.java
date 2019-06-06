@@ -31,12 +31,12 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public UserDataSet getUserByLogin(String fLogin) {
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
-       UserDataSet user = (UserDataSet) session
-                .createQuery("from UserDataSet where login = '" + fLogin + "'", UserDataSet.class);
-        session.close();
-        return null;
+        UserDataSet uds = null;
+        List<UserDataSet> users = findAll();
+        for (UserDataSet user : users) {
+            if (user.getLogin() == fLogin) { uds = user; }
+        }
+        return uds;
     }
 
     @Override
