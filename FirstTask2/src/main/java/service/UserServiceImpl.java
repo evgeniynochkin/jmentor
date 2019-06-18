@@ -37,8 +37,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDataSet getUserByLogin(String login) throws DBException {
-        if (userDAO.getUserByLogin(login) != null) {
-            return userDAO.getUserByLogin(login);
+        UserDataSet tempUser =  userDAO.getUserByLogin(login);
+        if (tempUser != null) {
+            return tempUser;
         } else {
             System.out.println("Пользователя с логином " + login + " не существует!");
             return null;

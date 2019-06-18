@@ -6,6 +6,9 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 import service.HibernateSessionFactoryUtil;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import java.sql.SQLException;
 import java.util.List;
 
 public class UserDAOImpl implements UserDAO {
@@ -31,11 +34,16 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public UserDataSet getUserByLogin(String fLogin) {
-        UserDataSet uds = null;
-        List<UserDataSet> users = findAll();
-        for (UserDataSet user : users) {
-            if (user.getLogin() == fLogin) { uds = user; }
-        }
+        EntityManager em = entityManagerFactory.
+//        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+//        Query query = session.createQuery("from users where login = :paramLogin");
+//        query.setParameter("paramLogin", fLogin);
+//        UserDataSet uds = (UserDataSet) query.getSingleResult();
+//        session.close();
+//        List<UserDataSet> users = findAll();
+//        for (UserDataSet user : users) {
+//            if (user.getLogin().equals(fLogin)) { uds = user; }
+//        }
         return uds;
     }
 
