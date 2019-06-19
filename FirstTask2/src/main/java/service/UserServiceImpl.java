@@ -26,8 +26,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void updateUser(UserDataSet uds) throws DBException {
-
+    public void updateUser(UserDataSet uds, Integer id) throws DBException {
+        userDAO.updateUser(uds, id);
     }
 
     @Override
@@ -42,6 +42,17 @@ public class UserServiceImpl implements UserService {
             return tempUser;
         } else {
             System.out.println("Пользователя с логином " + login + " не существует!");
+            return null;
+        }
+    }
+
+    @Override
+    public UserDataSet getUserById(Integer id) throws DBException {
+        UserDataSet tempUser =  userDAO.getUserById(id);
+        if (tempUser != null) {
+            return tempUser;
+        } else {
+            System.out.println("Пользователя с логином " + id + " не существует!");
             return null;
         }
     }

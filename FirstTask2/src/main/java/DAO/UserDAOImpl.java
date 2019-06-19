@@ -4,10 +4,9 @@ import model.UserDataSet;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.query.Query;
 import service.HibernateSessionFactoryUtil;
 
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -23,27 +22,50 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public void updateUser(UserDataSet uds) {
-
+    public void updateUser(UserDataSet uds, Integer id) {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createQuery("update UserDataSet set login = :paramLogin" +
+                ", password = :paramPassword" +
+                ", name = :paramName" +
+                " where id = :paramId");
+        query.setParameter("paramLogin", uds.getLogin());
+        query.setParameter("paramPassword", uds.getPassword());
+        query.setParameter("paramName", uds.getName());
+        query.setParameter("paramId", id);
+        int result = query.executeUpdate();
+        transaction.commit();
+        session.close();
     }
 
     @Override
     public void removeUser(int id) {
-
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createQuery("delete UserDataSet where id = :paramId");
+        query.setParameter("paramId", id);
+        int result = query.executeUpdate();
+        transaction.commit();
+        session.close();
     }
 
     @Override
     public UserDataSet getUserByLogin(String fLogin) {
-        EntityManager em = entityManagerFactory.
-//        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-//        Query query = session.createQuery("from users where login = :paramLogin");
-//        query.setParameter("paramLogin", fLogin);
-//        UserDataSet uds = (UserDataSet) query.getSingleResult();
-//        session.close();
-//        List<UserDataSet> users = findAll();
-//        for (UserDataSet user : users) {
-//            if (user.getLogin().equals(fLogin)) { uds = user; }
-//        }
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Query query = session.createQuery("from UserDataSet where login = :paramLogin", UserDataSet.class);
+        query.setParameter("paramLogin", fLogin);
+        UserDataSet uds = (UserDataSet) query.uniqueResult();
+        session.close();
+        return uds;
+    }
+
+    @Override
+    public UserDataSet getUserById(Integer id) {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Query query = session.createQuery("from UserDataSet where id = :paramId", UserDataSet.class);
+        query.setParameter("paramId", id);
+        UserDataSet uds = (UserDataSet) query.uniqueResult();
+        session.close();
         return uds;
     }
 

@@ -34,7 +34,15 @@ public class Main {
         uds.setPassword("pass3");
         userService.addUser(uds);
 
-        System.out.println(userService.getUserByLogin("login2"));
+        uds.setName("name4");
+        uds.setLogin("login4");
+        uds.setPassword("pass4");
+
+        System.out.println(userService.getUserById(2));
+
+        userService.removeUser(2);
+
+        System.out.println(userService.getUserById(2));
 
         //Очистка БД
         Connection con = null;
