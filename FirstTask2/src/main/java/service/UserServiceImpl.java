@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void removeUser(int id) throws DBException {
-
+        userDAO.removeUser(id);
     }
 
     @Override

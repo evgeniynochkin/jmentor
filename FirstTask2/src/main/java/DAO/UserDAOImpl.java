@@ -47,6 +47,7 @@ public class UserDAOImpl implements UserDAO {
         int result = query.executeUpdate();
         transaction.commit();
         session.close();
+        System.out.println(result);
     }
 
     @Override
