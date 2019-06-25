@@ -15,27 +15,10 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.3</version>
             </plugin>
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat9-maven-plugin</artifactId>
-                <version>9.0.19</version>
-                <configuration>
-                    <url>http://localhost:8080</url>
-                    <server>TomcatServer</server>
-                    <path>/${project.name}</path>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
     <dependencies>
-
-        <!-- Server -->
-        <dependency>
-            <groupId>org.apache.tomcat.maven</groupId>
-            <artifactId>tomcat9-maven-plugin</artifactId>
-            <version>9.0.19</version>
-        </dependency>
 
         <!-- Hibernate -->
         <dependency>
