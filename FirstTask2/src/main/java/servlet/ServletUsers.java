@@ -18,12 +18,6 @@ public class ServletUsers extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        response.setContentType("text/html");
-        PrintWriter writer = response.getWriter();
-        try {
-            writer.println("<h2>Page of Users</h2>");
-        } finally {
-            writer.close();
-        }
+        request.getRequestDispatcher("Users.jsp").forward(request, response);
     }
 }
