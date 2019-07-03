@@ -11,22 +11,34 @@
     <title>Authorization</title>
 </head>
 <body>
-<br>
-    <h1>Авторизируйтесь:</h1>
-    <form action="Users" method="post">
-        Логин: <input type="text" name="login" size="10"><br>
-        Пароль: <input type="password" name="password" size="10"><br>
-        <p>
-        <table>
+    <center>
+        <h1>Пользователи</h1>
+        <h2>
+            <a href="/new">Новый пользователь</a>
+            <a href="/userslist">Список пользователей</a>
+        </h2>
+    </center>
+    <div aling="center">
+        <table border="1" cellpadding="5">
+            <caption><h2>Список пользователей</h2></caption>
             <tr>
-                <th><small>
-                    <input type="submite" name="login" value="Войти">
-                </small>
-                <th><small>
-                    <input type="submite" name="registration" value="Зарегистрироваться">
-                </small>
+                <th>ID</th>
+                <th>Логин</th>
+                <th>Имя</th>
+            </tr>
+            <c:forEach var="users" items="${listUsers}">
+                <tr>
+                    <td><c:out value="${users.id}" /></td>
+                    <td><c:out value="${users.login}" /></td>
+                    <td><c:out value="${users.name}" /></td>
+                    <td>
+                        <a href="/edit?id=<c:out value='${users.id}' />">Редактировать</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/delete?id=<c:out value='${users.id}' />">Удалить</a>
+                    </td>
+                </tr>
+            </c:forEach>
         </table>
-    </form>
-</br>
+    </div>
 </body>
 </html>
