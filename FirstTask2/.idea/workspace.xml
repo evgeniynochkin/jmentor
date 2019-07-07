@@ -7,14 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/CheckUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/Dispatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/Registartion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/errorRegistration.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/successLogin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Registration.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/ListUsers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/errorRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/UserForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/successLogin.jsp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -97,7 +95,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="833">
@@ -107,9 +105,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Users.jsp">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/ListUsers.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="-60">
               <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
               <folding>
                 <element signature="e#1123#1129#0#HTML" expanded="true" />
@@ -122,39 +120,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/UserForm.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="1122">
+              <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#390#396#0#HTML" expanded="true" />
+                <element signature="e#396#402#0#HTML" expanded="true" />
+                <element signature="e#402#408#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="35" lean-forward="true" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#0#108#1" expanded="true" />
-                <element signature="e#0#38#1" expanded="true" />
-                <element signature="e#0#42#0" expanded="true" />
-                <element signature="e#0#36#0" expanded="true" />
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/UserDataSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+            <state relative-caret-position="-408">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -165,8 +148,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -196,7 +179,9 @@
         <option value="$PROJECT_DIR$/src/main/java/servlet/CheckUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/Registartion.java" />
         <option value="$PROJECT_DIR$/web/Users.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/NewUser.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/UserForm.jsp" />
       </list>
     </option>
   </component>
@@ -334,6 +319,11 @@
     <property name="project.structure.side.proportion" value="0.14482127" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\enochkin\jmentor\FirstTask2\web\WEB-INF" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -419,7 +409,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.21" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.21" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/FirstTask/Users" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/FirstTask/ListUsers" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="FirstTask">
@@ -609,7 +599,7 @@
       <workItem from="1559841558940" duration="1434000" />
       <workItem from="1560327367695" duration="4378000" />
       <workItem from="1560703270810" duration="13980000" />
-      <workItem from="1561198477005" duration="25052000" />
+      <workItem from="1561198477005" duration="28522000" />
     </task>
     <task id="LOCAL-00001" summary="New Task One 21/05/2019-1100">
       <created>1558423242276</created>
@@ -688,7 +678,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561492445075</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="NewTask2 03.07.19">
+      <created>1562177793570</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1562177793570</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -697,14 +694,14 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79256000" />
+    <option name="totallyTimeSpent" value="82726000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Web" sideWeight="0.11442786" side_tool="true" visible="true" weight="0.11886994" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.88557214" visible="true" weight="0.11886994" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.88557214" visible="true" weight="0.11886994" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -715,7 +712,7 @@
       <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -753,7 +750,8 @@
     <MESSAGE value="NewTask2 23.06.19" />
     <MESSAGE value="NewTask2 25.06.19" />
     <MESSAGE value="NewTask2 26.06.19" />
-    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 26.06.19" />
+    <MESSAGE value="NewTask2 03.07.19" />
+    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 03.07.19" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/exception/DBException.java">
@@ -828,16 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -855,13 +843,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
@@ -930,29 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/Users.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding>
-            <element signature="e#1123#1129#0#HTML" expanded="true" />
-            <element signature="e#1129#1135#0#HTML" expanded="true" />
-            <element signature="e#1135#1141#0#HTML" expanded="true" />
-            <element signature="e#1141#1147#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DAO/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -982,6 +940,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-332">
+          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/ListUsers.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="e#1123#1129#0#HTML" expanded="true" />
+            <element signature="e#1129#1135#0#HTML" expanded="true" />
+            <element signature="e#1135#1141#0#HTML" expanded="true" />
+            <element signature="e#1141#1147#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/UserForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
+          <folding>
+            <element signature="e#390#396#0#HTML" expanded="true" />
+            <element signature="e#396#402#0#HTML" expanded="true" />
+            <element signature="e#402#408#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
