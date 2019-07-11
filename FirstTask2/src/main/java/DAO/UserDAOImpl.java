@@ -3,11 +3,9 @@ package DAO;
 import model.UserDataSet;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.criterion.Restrictions;
 import org.hibernate.query.Query;
 import service.HibernateSessionFactoryUtil;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public class UserDAOImpl implements UserDAO {
@@ -74,8 +72,10 @@ public class UserDAOImpl implements UserDAO {
     public List<UserDataSet> findAll() {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        List<UserDataSet> users = (List<UserDataSet>) session
-                .createQuery("from UserDataSet", UserDataSet.class).list();
+//        List<UserDataSet> users = (List<UserDataSet>) session
+//                .createQuery("from UserDataSet", UserDataSet.class).list();
+        Query query = session.createQuery("FROM UserDataSet");
+        List<UserDataSet> users = query.list();
         transaction.commit();
         session.close();
         return users;
