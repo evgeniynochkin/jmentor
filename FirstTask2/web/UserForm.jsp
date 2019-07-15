@@ -26,6 +26,13 @@
         <c:if test="${uds == null}">
             <form action="insert" method="post">
         </c:if>
+
+                <%--
+        <c:forEach items="${users}" var="user">
+            <h3>${user.userName}</h3>
+        </c:forEach>
+
+                <%--
         <table border="1" cellpadding="4">
             <caption>
                 <h2>
@@ -64,6 +71,7 @@
                 </td>
             </tr>
         </table>
+                --%>
             </form>
     </div>
 </body>

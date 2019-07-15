@@ -38,42 +38,42 @@ public class DBTest extends Assert {
         usi.addUser(uds);
     }
 
-    @After
-    public void endText() {
-        Connection con = null;
-        Statement statement = null;
-        try {
-            Class.forName(DBProperty.HIBERNATE_DRIVER);
-
-            System.out.println("Connecting to database...");
-            con = DriverManager.getConnection(DBProperty.HIBERNATE_URL, USER,PWD);
-
-            System.out.println("Dropping Table..");
-            statement = con.createStatement();
-            String sql = "drop table users ";
-            statement.executeUpdate(sql);
-            System.out.println("Table Dropped.");
-
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        } finally {
-            try {
-                System.out.println("Closing Connection");
-                if (statement != null)
-                    statement.close();
-            } catch (SQLException e) {
-            }
-            try {
-                if (con != null)
-                    con.close();
-            } catch (SQLException sqlEx) {
-                System.out.println(sqlEx.getMessage());
-            }
-        }
-        System.out.println("Ending Program..");
-    }
+//    @After
+//    public void endText() {
+//        Connection con = null;
+//        Statement statement = null;
+//        try {
+//            Class.forName(DBProperty.HIBERNATE_DRIVER);
+//
+//            System.out.println("Connecting to database...");
+//            con = DriverManager.getConnection(DBProperty.HIBERNATE_URL, USER,PWD);
+//
+//            System.out.println("Dropping Table..");
+//            statement = con.createStatement();
+//            String sql = "drop table users ";
+//            statement.executeUpdate(sql);
+//            System.out.println("Table Dropped.");
+//
+//        } catch (SQLException e) {
+//            System.out.println(e.getMessage());
+//        } catch (Exception e) {
+//            System.out.println(e.getMessage());
+//        } finally {
+//            try {
+//                System.out.println("Closing Connection");
+//                if (statement != null)
+//                    statement.close();
+//            } catch (SQLException e) {
+//            }
+//            try {
+//                if (con != null)
+//                    con.close();
+//            } catch (SQLException sqlEx) {
+//                System.out.println(sqlEx.getMessage());
+//            }
+//        }
+//        System.out.println("Ending Program..");
+//    }
 
     @Test
     public void runTest() throws DBException {

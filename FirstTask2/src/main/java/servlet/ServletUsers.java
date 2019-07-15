@@ -15,12 +15,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ServletUsers", urlPatterns = "/ListUsers")
+@WebServlet(name = "ServletUsers", urlPatterns = {"/ListUsers"})
 public class ServletUsers extends HttpServlet {
 
     private UserService usi = new UserServiceImpl();
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         doGet(request, response);
     }
 
@@ -29,29 +30,39 @@ public class ServletUsers extends HttpServlet {
         String action = request.getServletPath();
 
         try {
-            switch (action) {
-                case "/new":
-                    showNewForm(request, response);
-                    break;
-                case "/insert":
-                    insertUser(request, response);
-                    break;
-                case "/delete":
-                    deleteUser(request, response);
-                    break;
-                case "/edit":
-                    showEditForm(request, response);
-                    break;
-                case "/update":
-                    updateUser(request, response);
-                    break;
-                default:
-                    listUsers(request, response);
-                    break;
-            }
+            List<UserDataSet> uList = usi.findAllUsers();
+            request.setAttribute("users", uList);
         } catch (DBException ex) {
             throw new ServletException(ex);
         }
+
+        RequestDispatcher view = request.getRequestDispatcher("/ListUsers.jsp");
+        view.forward(request, response);
+
+//        try {
+//            switch (action) {
+//                case "/new":
+//                    showNewForm(request, response);
+//                    break;
+//                case "/insert":
+//                    insertUser(request, response);
+//                    break;
+//                case "/delete":
+//                    deleteUser(request, response);
+//                    break;
+//                case "/edit":
+//                    showEditForm(request, response);
+//                    break;
+//                case "/update":
+//                    updateUser(request, response);
+//                    break;
+//                default:
+//                    listUsers(request, response);
+//                    break;
+//            }
+//        } catch (DBException ex) {
+//            throw new ServletException(ex);
+//        }
     }
 
     private void showNewForm(HttpServletRequest request, HttpServletResponse response)
@@ -108,11 +119,11 @@ public class ServletUsers extends HttpServlet {
         response.sendRedirect("list");
     }
 
-    private void listUsers(HttpServletRequest request, HttpServletResponse response)
-            throws DBException, IOException, ServletException {
-        List<UserDataSet> listUsers = usi.findAllUsers();
-        request.setAttribute("listUsers", listUsers);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("ListUsers.jsp");
-        dispatcher.forward(request, response);
-    }
+//    private void listUsers(HttpServletRequest request, HttpServletResponse response)
+//            throws DBException, IOException, ServletException {
+//        List<UserDataSet> listUsers = usi.findAllUsers();
+//        request.setAttribute("listUsers", listUsers);
+//        RequestDispatcher dispatcher = request.getRequestDispatcher("ListUsers.jsp");
+//        dispatcher.forward(request, response);
+//    }
 }
