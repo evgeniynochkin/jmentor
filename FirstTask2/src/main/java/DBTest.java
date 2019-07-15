@@ -20,23 +20,23 @@ public class DBTest extends Assert {
     UserService usi = new UserServiceImpl();
     UserDataSet uds = new UserDataSet();
 
-    @Before
-    public void beginTest() throws DBException {
-        uds.setLogin("First");
-        uds.setPassword("111");
-        uds.setName("Mr_One");
-        usi.addUser(uds);
-
-        uds.setLogin("Second");
-        uds.setPassword("222");
-        uds.setName("Mr_Two");
-        usi.addUser(uds);
-
-        uds.setLogin("Third");
-        uds.setPassword("333");
-        uds.setName("Mr_Three");
-        usi.addUser(uds);
-    }
+//    @Before
+//    public void beginTest() throws DBException {
+//        uds.setLogin("First");
+//        uds.setPassword("111");
+//        uds.setName("Mr_One");
+//        usi.addUser(uds);
+//
+//        uds.setLogin("Second");
+//        uds.setPassword("222");
+//        uds.setName("Mr_Two");
+//        usi.addUser(uds);
+//
+//        uds.setLogin("Third");
+//        uds.setPassword("333");
+//        uds.setName("Mr_Three");
+//        usi.addUser(uds);
+//    }
 
 //    @After
 //    public void endText() {
