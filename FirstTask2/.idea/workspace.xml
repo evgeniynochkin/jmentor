@@ -8,11 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/ListUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/ListUsers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/UserForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/UserForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -104,13 +100,56 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="31" selection-start-line="31" selection-start-column="2" selection-end-line="36" selection-end-column="11" />
+            <state relative-caret-position="348">
+              <caret line="31" selection-start-line="31" selection-end-line="36" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DBTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-323">
+              <caret line="16" column="57" lean-forward="true" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="88" column="66" selection-start-line="88" selection-start-column="66" selection-end-line="88" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#545#546#0" expanded="true" />
+                <element signature="e#567#568#0" expanded="true" />
+                <element signature="e#0#108#1" expanded="true" />
+                <element signature="e#0#38#1" expanded="true" />
+                <element signature="e#0#42#0" expanded="true" />
+                <element signature="e#0#36#0" expanded="true" />
+                <element signature="e#0#16#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,12 +210,12 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/NewUser.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/UserForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/DBTest.java" />
         <option value="$PROJECT_DIR$/web/ListUsers.jsp" />
         <option value="$PROJECT_DIR$/web/UserForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DBTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -304,8 +343,11 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MyServ22" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -332,7 +374,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DBTest">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.21">
     <configuration name="DBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FirstTask2" />
       <option name="PACKAGE_NAME" value="" />
@@ -609,7 +651,7 @@
       <workItem from="1561198477005" duration="30613000" />
       <workItem from="1562774923584" duration="6070000" />
       <workItem from="1562869512864" duration="6816000" />
-      <workItem from="1563210625394" duration="804000" />
+      <workItem from="1563210625394" duration="8831000" />
     </task>
     <task id="LOCAL-00001" summary="New Task One 21/05/2019-1100">
       <created>1558423242276</created>
@@ -716,28 +758,24 @@
       <option name="project" value="LOCAL" />
       <updated>1562869869952</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="NewTask2 11.07.19">
+      <created>1563211502245</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1563211502245</updated>
+    </task>
+    <task id="LOCAL-00017" summary="NewTask2 15.07.19">
+      <created>1563211570081</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1563211570081</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DBTest - 2019.07.10 at 19h 39m 39s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBTest - 2019.07.10 at 19h 40m 50s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBTest - 2019.07.10 at 19h 41m 10s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBTest - 2019.07.10 at 19h 42m 16s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBTest - 2019.07.10 at 19h 42m 40s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBTest - 2019.07.10 at 19h 44m 19s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DBTest - 2019.07.10 at 20h 54m 18s.xml">
       <configuration name="DBTest" configurationId="JUnit" />
     </history-entry>
@@ -750,9 +788,27 @@
     <history-entry file="DBTest - 2019.07.13 at 20h 47m 30s.xml">
       <configuration name="DBTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DBTest - 2019.07.15 at 20h 25m 53s.xml">
+      <configuration name="DBTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBTest - 2019.07.16 at 18h 50m 32s.xml">
+      <configuration name="DBTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBTest - 2019.07.16 at 20h 15m 34s.xml">
+      <configuration name="DBTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBTest - 2019.07.17 at 19h 32m 56s.xml">
+      <configuration name="DBTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBTest - 2019.07.17 at 20h 31m 26s.xml">
+      <configuration name="DBTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBTest - 2019.07.17 at 20h 33m 03s.xml">
+      <configuration name="DBTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98507000" />
+    <option name="totallyTimeSpent" value="106534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -812,7 +868,8 @@
     <MESSAGE value="NewTask2 07.07.19" />
     <MESSAGE value="NewTask2 10.07.19" />
     <MESSAGE value="NewTask2 11.07.19" />
-    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 11.07.19" />
+    <MESSAGE value="NewTask2 15.07.19" />
+    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 15.07.19" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/exception/DBException.java">
@@ -943,31 +1000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="77" column="47" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#108#1" expanded="true" />
-            <element signature="e#0#38#1" expanded="true" />
-            <element signature="e#0#42#0" expanded="true" />
-            <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#0#16#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DBTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1198">
-          <caret line="78" column="46" lean-forward="true" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://3f8a7bce-f675-4959-805a-b625e1eefeea/database/ft/schema/public/table/users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="eb5f7948-9570-4449-a2d8-eb047f9bcb58">
@@ -981,16 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="57" lean-forward="true" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1008,12 +1030,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="31" selection-start-line="31" selection-start-column="2" selection-end-line="36" selection-end-column="11" />
+        <state relative-caret-position="-323">
+          <caret line="16" column="57" lean-forward="true" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="31" selection-start-line="31" selection-end-line="36" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DBTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="88" column="66" selection-start-line="88" selection-start-column="66" selection-end-line="88" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#0#108#1" expanded="true" />
+            <element signature="e#0#38#1" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#0#16#1" expanded="true" />
           </folding>
         </state>
       </provider>
