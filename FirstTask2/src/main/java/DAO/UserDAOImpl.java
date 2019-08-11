@@ -2,9 +2,7 @@ package DAO;
 
 import model.UserDataSet;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 import service.HibernateSessionFactoryUtil;
 
@@ -12,15 +10,14 @@ import java.util.List;
 
 public class UserDAOImpl implements UserDAO {
 
-    Session session;
+    private Session session;
 
-    public Session getSession() {
-        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        return session;
+    public void openSession() {
+        this.session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
     }
 
-    public void closeSession(Session session) {
-        session.close();
+    public void closeSession() {
+        this.session.close();
     }
 
     @Override
@@ -83,14 +80,14 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public List<UserDataSet> findAll() {
-        session = getSession();
+        openSession();
         Transaction transaction = session.beginTransaction();
 //        List<UserDataSet> users = (List<UserDataSet>) session
 //                .createQuery("from UserDataSet", UserDataSet.class).list();
         Query query = session.createQuery("FROM UserDataSet");
         List<UserDataSet> users = query.list();
         transaction.commit();
-        closeSession(session);
+        closeSession();
         return users;
     }
 }

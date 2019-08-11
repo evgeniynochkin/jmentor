@@ -13,22 +13,29 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet(name = "ServletUsers", urlPatterns = {"/ListUsers"})
+//@WebServlet(name = "ServletUsers", urlPatterns = {"/ListUsers"})
+@WebServlet("/hello")
 public class ServletUsers extends HttpServlet {
 
     private UserService usi = new UserServiceImpl();
 
+    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doGet(request, response);
     }
 
+    @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String action = request.getServletPath();
 
+//          request.getRequestDispatcher("hell.jsp").forward(request, response);
+//
+//        String action = request.getServletPath();
+//
         try {
             List<UserDataSet> uList = usi.findAllUsers();
             request.setAttribute("users", uList);
