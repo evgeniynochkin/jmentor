@@ -5,6 +5,7 @@
   Time: 18:34
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -12,19 +13,45 @@
 </head>
 <body>
     <center>
-        <h1>USer Manager</h1>
+        <h1>User Manager</h1>
         <h2>
-            <a herf="/new">Add New User</a>
+            <a herf="${pageContext.servletContext.contextPath}/new">Add New User</a>
             &nbsp;&nbsp;&nbsp;
-            <a herf="/list">List All Users</a>
+            <a herf="${pageContext.servletContext.contextPath}/list">List All Users</a>
         </h2>
     </center>
     <div align="center">
         <c:if test="${uds != null}">
-            <form action="update" method="post">
+            <form action="update" method="POST">
         </c:if>
         <c:if test="${uds == null}">
-            <form action="insert" method="post">
+            <form action="${pageContext.servletContext.contextPath}/insert" method="POST">
+                <table>
+                    <tr>
+                        <td align="rigth" >Login : </td>
+                        <td>
+                            <input type="text" name="login">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td aling="rigth" >Password : </td>
+                        <td>
+                            <input type="text" name="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="rigth" >Name : </td>
+                        <td>
+                            <input type="text" name="name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" aling="center" value="Save"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </c:if>
 
                 <%--

@@ -5,6 +5,7 @@
   Time: 20:13
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,8 +15,7 @@
     <center>
         <h1>Пользователи</h1>
         <h2>
-            <a href="/UserForm">Новый пользователь</a>
-            <a href="/userslist">Список пользователей</a>
+            <a href="${pageContext.servletContext.contextPath}/UserForm.jsp">Новый пользователь</a>
         </h2>
     </center>
     <div aling="center">
@@ -26,15 +26,15 @@
                 <th>Логин</th>
                 <th>Имя</th>
             </tr>
-            <c:forEach var="users" items="${listUsers}">
+            <c:forEach var="users" items="${usersList}">
                 <tr>
                     <td><c:out value="${users.id}" /></td>
                     <td><c:out value="${users.login}" /></td>
                     <td><c:out value="${users.name}" /></td>
                     <td>
-                        <a href="/edit?id=<c:out value='${users.id}' />">Редактировать</a>
+                        <a href="${pageContext.servletContext.contextPath}/edit?id=${users.id}">Редактировать</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/delete?id=<c:out value='${users.id}' />">Удалить</a>
+                        <a href="${pageContext.servletContext.contextPath}/delete?id=${users.id}">Удалить</a>
                     </td>
                 </tr>
             </c:forEach>

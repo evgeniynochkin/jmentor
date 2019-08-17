@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
 //@WebServlet(name = "ServletUsers", urlPatterns = {"/ListUsers"})
@@ -32,13 +31,9 @@ public class ServletUsers extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-//          request.getRequestDispatcher("hell.jsp").forward(request, response);
-//
-//        String action = request.getServletPath();
-//
         try {
             List<UserDataSet> uList = usi.findAllUsers();
-            request.setAttribute("users", uList);
+            request.setAttribute("usersList", uList);
         } catch (DBException ex) {
             throw new ServletException(ex);
         }
@@ -46,30 +41,7 @@ public class ServletUsers extends HttpServlet {
         RequestDispatcher view = request.getRequestDispatcher("/ListUsers.jsp");
         view.forward(request, response);
 
-//        try {
-//            switch (action) {
-//                case "/new":
-//                    showNewForm(request, response);
-//                    break;
-//                case "/insert":
-//                    insertUser(request, response);
-//                    break;
-//                case "/delete":
-//                    deleteUser(request, response);
-//                    break;
-//                case "/edit":
-//                    showEditForm(request, response);
-//                    break;
-//                case "/update":
-//                    updateUser(request, response);
-//                    break;
-//                default:
-//                    listUsers(request, response);
-//                    break;
-//            }
-//        } catch (DBException ex) {
-//            throw new ServletException(ex);
-//        }
+        
     }
 
     private void showNewForm(HttpServletRequest request, HttpServletResponse response)
