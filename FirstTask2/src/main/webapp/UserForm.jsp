@@ -17,15 +17,16 @@
         <h2>
             <a herf="${pageContext.servletContext.contextPath}/new">Add New User</a>
             &nbsp;&nbsp;&nbsp;
-            <a herf="${pageContext.servletContext.contextPath}/list">List All Users</a>
+            <a herf="${pageContext.servletContext.contextPath}/hello">List All Users</a>
         </h2>
     </center>
     <div align="center">
         <c:if test="${uds != null}">
             <form action="update" method="POST">
+
         </c:if>
         <c:if test="${uds == null}">
-            <form action="${pageContext.servletContext.contextPath}/insert" method="POST">
+            <form action="${pageContext.servletContext.contextPath}/useraction/insert" method="POST">
                 <table>
                     <tr>
                         <td align="rigth" >Login : </td>

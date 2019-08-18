@@ -1,4 +1,4 @@
-package servlet;
+package servlet.useraction;
 
 import exception.DBException;
 import model.UserDataSet;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/insert")
+@WebServlet("/useraction/insert")
 public class UserAddServlet extends HttpServlet {
 
     private UserService usi = new UserServiceImpl();
@@ -39,6 +39,7 @@ public class UserAddServlet extends HttpServlet {
         uds.setName(name);
 
         usi.addUser(uds);
-        response.sendRedirect(String.format("%s%s", request.getServletPath(), "/hello"));
+//        response.sendRedirect(String.format("%s%s", request.getServletPath(), "/hello"));
+        response.sendRedirect("http://localhost:8080/FirstTask2_war/hello");
     }
 }

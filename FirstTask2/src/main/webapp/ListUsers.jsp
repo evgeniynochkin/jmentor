@@ -32,9 +32,9 @@
                     <td><c:out value="${users.login}" /></td>
                     <td><c:out value="${users.name}" /></td>
                     <td>
-                        <a href="${pageContext.servletContext.contextPath}/edit?id=${users.id}">Редактировать</a>
+                        <a href="${pageContext.servletContext.contextPath}/useraction/edit?id=${users.id}">Редактировать</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="${pageContext.servletContext.contextPath}/delete?id=${users.id}">Удалить</a>
+                        <a href="${pageContext.servletContext.contextPath}/useraction/delete?id=${users.id}">Удалить</a>
                     </td>
                 </tr>
             </c:forEach>
