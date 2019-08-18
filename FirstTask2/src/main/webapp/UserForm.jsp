@@ -15,52 +15,17 @@
     <center>
         <h1>User Manager</h1>
         <h2>
-            <a herf="${pageContext.servletContext.contextPath}/new">Add New User</a>
-            &nbsp;&nbsp;&nbsp;
-            <a herf="${pageContext.servletContext.contextPath}/hello">List All Users</a>
+            <a href="${pageContext.servletContext.contextPath}/hello">Список пользователей</a>
         </h2>
     </center>
     <div align="center">
         <c:if test="${uds != null}">
-            <form action="update" method="POST">
-
+            <form action="${pageContext.servletContext.contextPath}/useraction/edit" method="POST">
         </c:if>
         <c:if test="${uds == null}">
             <form action="${pageContext.servletContext.contextPath}/useraction/insert" method="POST">
-                <table>
-                    <tr>
-                        <td align="rigth" >Login : </td>
-                        <td>
-                            <input type="text" name="login">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td aling="rigth" >Password : </td>
-                        <td>
-                            <input type="text" name="password">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="rigth" >Name : </td>
-                        <td>
-                            <input type="text" name="name">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="submit" aling="center" value="Save"/>
-                        </td>
-                    </tr>
-                </table>
-            </form>
         </c:if>
 
-                <%--
-        <c:forEach items="${users}" var="user">
-            <h3>${user.userName}</h3>
-        </c:forEach>
-
-                <%--
         <table border="1" cellpadding="4">
             <caption>
                 <h2>
@@ -99,7 +64,6 @@
                 </td>
             </tr>
         </table>
-                --%>
             </form>
     </div>
 </body>

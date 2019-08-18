@@ -28,6 +28,7 @@ public class UserEditServlet extends HttpServlet {
             throw new ServletException(e);
         }
     }
+
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -36,7 +37,7 @@ public class UserEditServlet extends HttpServlet {
         try {
             UserDataSet uds = usi.getUserById(id);
             request.setAttribute("uds", uds);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/EditUser.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/UserForm.jsp");
             dispatcher.forward(request, response);
         } catch (DBException e) {
             throw new ServletException(e);
