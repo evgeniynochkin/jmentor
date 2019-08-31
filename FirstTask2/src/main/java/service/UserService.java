@@ -3,11 +3,12 @@ package service;
 import exception.DBException;
 import model.UserDataSet;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface UserService {
 
-    public String addUser(UserDataSet uds) throws DBException;
+    public String addUser(UserDataSet uds) throws DBException, SQLException;
 
     public void updateUser(UserDataSet uds, Integer id) throws DBException;
 

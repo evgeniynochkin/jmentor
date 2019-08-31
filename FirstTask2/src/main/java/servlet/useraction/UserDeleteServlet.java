@@ -30,6 +30,6 @@ public class UserDeleteServlet extends HttpServlet {
             throws DBException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         usi.removeUser(id);
-        response.sendRedirect("http://localhost:8080/FirstTask2_war/hello");
+        response.sendRedirect("http://localhost:80/FirstTask2_war/hello");
     }
 }

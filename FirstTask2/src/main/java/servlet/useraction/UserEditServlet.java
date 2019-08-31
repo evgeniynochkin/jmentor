@@ -57,6 +57,6 @@ public class UserEditServlet extends HttpServlet {
         uds.setName(name);
 
         usi.updateUser(uds, id);
-        response.sendRedirect("http://localhost:8080/FirstTask2_war/hello");
+        response.sendRedirect("http://localhost:80/FirstTask2_war/hello");
     }
 }

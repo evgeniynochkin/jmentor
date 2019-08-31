@@ -4,13 +4,24 @@ import model.UserDataSet;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+import service.DBSessionFactory;
 import service.HibernateSessionFactoryUtil;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 
 public class UserDAOImpl implements UserDAO {
 
+    private final static String JDBC_URL = "jdbc:postgresql://localhost:5432/ft";
+    private final static String JDBC_USER = "postgres";
+    private final static String JDBC_PASSWORD = "1111";
+    private Connection jdbcConnection;
+
     private Session session;
+    //private DBSessionFactory connection = new DBSessionFactory();
 
     public void openSession() {
         this.session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
@@ -21,12 +32,26 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public void addUser(UserDataSet uds) {
-        openSession();
-        Transaction transaction = session.beginTransaction();
-        session.save(uds);
-        transaction.commit();
-        closeSession();
+    public void addUser(UserDataSet uds) throws SQLException {
+        //реализация через JDBC
+        String sql = "INSERT INTO users (login, password, name) VALUES (?,?,?)";
+
+        connect();
+
+        PreparedStatement statement = jdbcConnection.prepareStatement(sql);
+        statement.setString(1, uds.getName());
+        statement.setString(2, uds.getLogin());
+        statement.setString(3, uds.getPassword());
+        statement.close();
+
+        disconnect();
+
+        //реализация через Hibernate
+//        openSession();
+//        Transaction transaction = session.beginTransaction();
+//        session.save(uds);
+//        transaction.commit();
+//        closeSession();
     }
 
     @Override
@@ -87,5 +112,23 @@ public class UserDAOImpl implements UserDAO {
         transaction.commit();
         closeSession();
         return users;
+    }
+
+    protected void connect() throws SQLException {
+        if (jdbcConnection == null || jdbcConnection.isClosed()) {
+            try {
+                Class.forName("org.postgresql.Driver");
+            } catch (ClassNotFoundException e) {
+                throw new SQLException(e);
+            }
+            jdbcConnection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
+            System.out.println("Connection");
+        }
+    }
+
+    protected void disconnect() throws SQLException {
+        if (jdbcConnection != null && !jdbcConnection.isClosed()) {
+            jdbcConnection.close();
+        }
     }
 }

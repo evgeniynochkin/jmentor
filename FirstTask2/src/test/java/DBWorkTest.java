@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 import service.UserServiceImpl;
 
+import java.sql.SQLException;
+
 public class DBWorkTest {
 
     UserService userService;
@@ -23,7 +25,7 @@ public class DBWorkTest {
             UserService usl = new UserServiceImpl();
             usl.addUser(uds);
 
-        } catch (DBException e) {
+        } catch (DBException | SQLException e) {
             e.printStackTrace();
         }
     }

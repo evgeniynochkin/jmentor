@@ -5,6 +5,7 @@ import DAO.UserDAOImpl;
 import exception.DBException;
 import model.UserDataSet;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
@@ -14,7 +15,7 @@ public class UserServiceImpl implements UserService {
     public UserServiceImpl() {}
 
     @Override
-    public String addUser(UserDataSet uds) throws DBException {
+    public String addUser(UserDataSet uds) throws DBException, SQLException {
         List<UserDataSet> lUsers = findAllUsers();
         for (UserDataSet user : lUsers) {
             if (user.getName().equals(uds.getName())) {

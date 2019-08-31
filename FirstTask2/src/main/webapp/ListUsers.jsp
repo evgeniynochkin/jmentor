@@ -15,7 +15,7 @@
     <center>
         <h1>Пользователи</h1>
         <h2>
-            <a href="${pageContext.servletContext.contextPath}/UserForm.jsp">Новый пользователь</a>
+            <a href="${pageContext.servletContext.contextPath}/useraction/insert">Новый пользователь</a>
         </h2>
     </center>
     <div aling="center">
