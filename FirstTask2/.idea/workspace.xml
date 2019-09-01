@@ -8,6 +8,14 @@
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/UserDataSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/UserDataSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/useraction/UserDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/useraction/UserDeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/useraction/UserEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/useraction/UserEditServlet.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +144,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.34439024" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -458,7 +466,8 @@
       <workItem from="1566837603531" duration="1612000" />
       <workItem from="1566842540308" duration="4723000" />
       <workItem from="1567104005703" duration="4217000" />
-      <workItem from="1567249000379" duration="1756000" />
+      <workItem from="1567249000379" duration="4364000" />
+      <workItem from="1567332236291" duration="4161000" />
     </task>
     <task id="LOCAL-00001" summary="New Task One 21/05/2019-1100">
       <created>1558423242276</created>
@@ -621,40 +630,15 @@
       <option name="project" value="LOCAL" />
       <updated>1567249193490</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="NewTask2 31.08.19">
+      <created>1567250882782</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1567250882782</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="DBTest - 2019.07.10 at 20h 54m 18s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBTest - 2019.07.10 at 20h 57m 03s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBTest - 2019.07.11 at 21h 29m 51s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBTest - 2019.07.13 at 20h 47m 30s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBTest - 2019.07.15 at 20h 25m 53s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBTest - 2019.07.16 at 18h 50m 32s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBTest - 2019.07.16 at 20h 15m 34s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBTest - 2019.07.17 at 19h 32m 56s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBTest - 2019.07.17 at 20h 31m 26s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBTest - 2019.07.17 at 20h 33m 03s.xml">
-      <configuration name="DBTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -698,15 +682,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="NewTask2 31.08.19" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
         <watch expression="view" />

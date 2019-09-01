@@ -21,6 +21,8 @@ public class UserDataSet {
 
     public UserDataSet() {}
 
+    public void setId(Integer id) { this.id = id; }
+
     public void setName(String name) { this.name = name; }
 
     public void setLogin(String login) { this.login = login; }

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 @WebServlet("/useraction/edit")
 public class UserEditServlet extends HttpServlet {
@@ -24,7 +25,7 @@ public class UserEditServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
             updateUser(request, response);
-        } catch (DBException e) {
+        } catch (DBException | SQLException e) {
             throw new ServletException(e);
         }
     }
@@ -39,14 +40,14 @@ public class UserEditServlet extends HttpServlet {
             request.setAttribute("uds", uds);
             RequestDispatcher dispatcher = request.getRequestDispatcher("/UserForm.jsp");
             dispatcher.forward(request, response);
-        } catch (DBException e) {
+        } catch (DBException | SQLException e) {
             throw new ServletException(e);
         }
     }
 
 
     private void updateUser(HttpServletRequest request, HttpServletResponse response)
-            throws DBException, IOException {
+            throws DBException, IOException, SQLException {
         String login = request.getParameter("login");
         String password = request.getParameter("password");
         String name = request.getParameter("name");

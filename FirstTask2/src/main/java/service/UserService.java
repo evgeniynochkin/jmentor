@@ -10,13 +10,13 @@ public interface UserService {
 
     public String addUser(UserDataSet uds) throws DBException, SQLException;
 
-    public void updateUser(UserDataSet uds, Integer id) throws DBException;
+    public void updateUser(UserDataSet uds, Integer id) throws DBException, SQLException;
 
-    public void removeUser(int id) throws DBException;
+    public void removeUser(int id) throws DBException, SQLException;
 
-    public UserDataSet getUserByLogin(String login) throws DBException;
+    public UserDataSet getUserByLogin(String login) throws DBException, SQLException;
 
-    public UserDataSet getUserById(Integer id) throws DBException;
+    public UserDataSet getUserById(Integer id) throws DBException, SQLException;
 
-    public List<UserDataSet> findAllUsers() throws DBException;
+    public List<UserDataSet> findAllUsers() throws DBException, SQLException;
 }

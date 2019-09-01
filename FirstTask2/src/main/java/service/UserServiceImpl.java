@@ -27,17 +27,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void updateUser(UserDataSet uds, Integer id) throws DBException {
+    public void updateUser(UserDataSet uds, Integer id) throws DBException, SQLException {
         userDAO.updateUser(uds, id);
     }
 
     @Override
-    public void removeUser(int id) throws DBException {
+    public void removeUser(int id) throws DBException, SQLException {
         userDAO.removeUser(id);
     }
 
     @Override
-    public UserDataSet getUserByLogin(String login) throws DBException {
+    public UserDataSet getUserByLogin(String login) throws DBException, SQLException {
         UserDataSet tempUser =  userDAO.getUserByLogin(login);
         if (tempUser != null) {
             return tempUser;
@@ -48,18 +48,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDataSet getUserById(Integer id) throws DBException {
+    public UserDataSet getUserById(Integer id) throws DBException, SQLException {
         UserDataSet tempUser =  userDAO.getUserById(id);
         if (tempUser != null) {
             return tempUser;
         } else {
-            System.out.println("Пользователя с логином " + id + " не существует!");
+            System.out.println("Пользователя с ID " + id + " не существует!");
             return null;
         }
     }
 
     @Override
-    public List<UserDataSet> findAllUsers() throws DBException {
+    public List<UserDataSet> findAllUsers() throws DBException, SQLException {
         return userDAO.findAll();
     }
 }

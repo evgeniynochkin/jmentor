@@ -9,13 +9,13 @@ public interface UserDAO {
 
     public void addUser(UserDataSet uds) throws SQLException;
 
-    public void updateUser(UserDataSet uds, Integer id);
+    public void updateUser(UserDataSet uds, Integer id) throws SQLException;
 
-    public void removeUser(int id);
+    public void removeUser(int id) throws SQLException;
 
-    public UserDataSet getUserByLogin(String login);
+    public UserDataSet getUserByLogin(String login) throws SQLException;
 
-    public UserDataSet getUserById(Integer id);
+    public UserDataSet getUserById(Integer id) throws SQLException;
 
-    public List<UserDataSet> findAll();
+    public List<UserDataSet> findAll() throws SQLException;
 }
