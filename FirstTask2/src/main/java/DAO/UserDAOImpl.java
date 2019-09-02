@@ -18,23 +18,24 @@ public class UserDAOImpl implements UserDAO {
     private final static String JDBC_PASSWORD = "1111";
     private Connection jdbcConnection;
 
-    private Session session;
-    //private DBSessionFactory connection = new DBSessionFactory();
+//    private Session session;
+    private DBSessionFactory connection = new DBSessionFactory();
 
-    public void openSession() {
-        this.session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-    }
-
-    public void closeSession() {
-        this.session.close();
-    }
+//    public void openSession() {
+//        this.session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+//    }
+//
+//    public void closeSession() {
+//        this.session.close();
+//    }
 
     @Override
     public void addUser(UserDataSet uds) throws SQLException {
         //реализация через JDBC
         String sql = "INSERT INTO users (login, password, name) VALUES (?,?,?)";
 
-        connect();
+        //connect();
+        jdbcConnection = connection.connect();
 
         PreparedStatement statement = jdbcConnection.prepareStatement(sql);
         statement.setString(1, uds.getLogin());
@@ -43,7 +44,8 @@ public class UserDAOImpl implements UserDAO {
         statement.executeUpdate();
         statement.close();
 
-        disconnect();
+        //disconnect();
+        connection.disconnect(jdbcConnection);
 
         //реализация через Hibernate
 //        openSession();
@@ -58,7 +60,7 @@ public class UserDAOImpl implements UserDAO {
         //реализация через JDBC
         String sql = "UPDATE users SET name = ?, login = ?, password = ? WHERE id=?";
 
-        connect();
+        jdbcConnection = connection.connect();
 
         PreparedStatement statement = jdbcConnection.prepareStatement(sql);
         statement.setString(1, uds.getName());
@@ -68,7 +70,7 @@ public class UserDAOImpl implements UserDAO {
         statement.executeUpdate();
         statement.close();
 
-        disconnect();
+        connection.disconnect(jdbcConnection);
 
         //реализация через Hibernate
 //        openSession();
@@ -91,14 +93,14 @@ public class UserDAOImpl implements UserDAO {
         //реализация через JDBC
         String sql = "DELETE FROM users WHERE id=?";
 
-        connect();
+        jdbcConnection = connection.connect();
 
         PreparedStatement statement = jdbcConnection.prepareStatement(sql);
         statement.setInt(1, id);
         statement.executeUpdate();
         statement.close();
 
-        disconnect();
+        connection.disconnect(jdbcConnection);
 
         //реализация через Hibernate
 //        openSession();
@@ -117,7 +119,7 @@ public class UserDAOImpl implements UserDAO {
         UserDataSet uds = new UserDataSet();
         String sql = "SELECT * FROM users WHERE login=?";
 
-        connect();
+        jdbcConnection = connection.connect();
 
         PreparedStatement statement = jdbcConnection.prepareStatement(sql);
         statement.setString(1, fLogin);
@@ -131,7 +133,7 @@ public class UserDAOImpl implements UserDAO {
 
         resultSet.close();
         statement.close();
-        disconnect();
+        connection.disconnect(jdbcConnection);
 
         return uds;
 
@@ -150,7 +152,7 @@ public class UserDAOImpl implements UserDAO {
         UserDataSet uds = new UserDataSet();
         String sql = "SELECT * FROM users WHERE id=?";
 
-        connect();
+        jdbcConnection = connection.connect();
 
         PreparedStatement statement = jdbcConnection.prepareStatement(sql);
         statement.setInt(1, id);
@@ -164,7 +166,7 @@ public class UserDAOImpl implements UserDAO {
 
         resultSet.close();
         statement.close();
-        disconnect();
+        connection.disconnect(jdbcConnection);
 
         return uds;
 
@@ -184,7 +186,7 @@ public class UserDAOImpl implements UserDAO {
 
         String sql = "SELECT * FROM users";
 
-        connect();
+        jdbcConnection = connection.connect();
 
         Statement statement = jdbcConnection.createStatement();
         ResultSet resultSet = statement.executeQuery(sql);
@@ -202,7 +204,7 @@ public class UserDAOImpl implements UserDAO {
         resultSet.close();
         statement.close();
 
-        disconnect();
+        connection.disconnect(jdbcConnection);
 
         return usersList;
 
@@ -214,23 +216,5 @@ public class UserDAOImpl implements UserDAO {
 //        transaction.commit();
 //        closeSession();
 //        return users;
-    }
-
-    protected void connect() throws SQLException {
-        if (jdbcConnection == null || jdbcConnection.isClosed()) {
-            try {
-                Class.forName("org.postgresql.Driver");
-            } catch (ClassNotFoundException e) {
-                throw new SQLException(e);
-            }
-            jdbcConnection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
-            System.out.println("Connection");
-        }
-    }
-
-    protected void disconnect() throws SQLException {
-        if (jdbcConnection != null && !jdbcConnection.isClosed()) {
-            jdbcConnection.close();
-        }
     }
 }

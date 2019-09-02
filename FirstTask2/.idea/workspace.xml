@@ -8,14 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/UserDataSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/UserDataSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ServletUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/useraction/UserDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/useraction/UserDeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/useraction/UserEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/useraction/UserEditServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/DBSessionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DBSessionFactory.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -467,7 +461,8 @@
       <workItem from="1566842540308" duration="4723000" />
       <workItem from="1567104005703" duration="4217000" />
       <workItem from="1567249000379" duration="4364000" />
-      <workItem from="1567332236291" duration="4161000" />
+      <workItem from="1567332236291" duration="5051000" />
+      <workItem from="1567438447034" duration="1452000" />
     </task>
     <task id="LOCAL-00001" summary="New Task One 21/05/2019-1100">
       <created>1558423242276</created>
@@ -637,7 +632,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567250882782</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="NewTask2 01.09.19">
+      <created>1567340818449</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1567340818449</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,9 +681,34 @@
     <MESSAGE value="NewTask2 18.08.19 12-00" />
     <MESSAGE value="NewTask2 18.08.19 13-00" />
     <MESSAGE value="NewTask2 31.08.19" />
-    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 31.08.19" />
+    <MESSAGE value="NewTask2 01.09.19" />
+    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 01.09.19" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
         <watch expression="view" />

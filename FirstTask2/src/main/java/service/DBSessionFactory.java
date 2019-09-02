@@ -12,7 +12,7 @@ public class DBSessionFactory {
 
     public Connection jdbcConnection;
 
-    public void connect() throws SQLException {
+    public Connection connect() throws SQLException {
         if (jdbcConnection == null || jdbcConnection.isClosed()) {
             try {
                 Class.forName("org.postgresql.Driver");
@@ -20,12 +20,14 @@ public class DBSessionFactory {
                 throw new SQLException(e);
             }
             jdbcConnection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
+            System.out.println("Connection");
         }
+        return jdbcConnection;
     }
 
-    public void disconnect() throws SQLException {
-        if (jdbcConnection != null && !jdbcConnection.isClosed()) {
-            jdbcConnection.close();
+    public void disconnect(Connection jdbcCon) throws SQLException {
+        if (jdbcCon != null && !jdbcCon.isClosed()) {
+            jdbcCon.close();
         }
     }
 }
