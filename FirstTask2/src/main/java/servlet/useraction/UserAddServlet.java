@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 @WebServlet("/useraction/insert")
 public class UserAddServlet extends HttpServlet {
@@ -42,9 +43,20 @@ public class UserAddServlet extends HttpServlet {
 
     private void insertUser(HttpServletRequest request, HttpServletResponse response)
             throws DBException, IOException, SQLException {
+
+        List<UserDataSet> uList = usi.findAllUsers();
+
         String login = request.getParameter("login");
         String password = request.getParameter("password");
         String name = request.getParameter("name");
+
+//        for (UserDataSet user : uList) {
+//            if (user.getLogin().equals(login)) {
+//                response.sendRedirect("http://localhost:80/FirstTask2_war/error");
+//            } else if (user.getPassword().equals(password)) {
+//                response.sendRedirect("http://localhost:80/FirstTask2_war/error");
+//            }
+//        }
 
         UserDataSet uds = new UserDataSet();
         uds.setLogin(login);
