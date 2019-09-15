@@ -4,7 +4,7 @@ import model.UserDataSet;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-import service.HibernateSessionFactoryUtil;
+import service.DBHelper;
 
 import java.sql.*;
 import java.util.List;
@@ -14,13 +14,10 @@ public class UserDAOHibernateImpl implements UserDAO {
     private final static String JDBC_USER = "postgres";
     private final static String JDBC_PASSWORD = "1111";
     private Connection jdbcConnection;
-
+    private DBHelper helper;
     private Session session;
 
-
-    public void openSession() {
-        this.session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-    }
+    public void openSession() { this.session = helper.getConfiguration().openSession(); }
 
     public void closeSession() {
         this.session.close();

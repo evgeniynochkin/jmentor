@@ -4,6 +4,7 @@ import model.UserDataSet;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import properties.PropertyDB;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,17 +13,10 @@ import java.sql.SQLException;
 public class DBHelper {
     private static DBHelper instance;
 
-    public final static String DB_URL = "jdbc:postgresql://localhost:5432/ft";
-    public final static String DB_USER = "postgres";
-    public final static String DB_PASSWORD = "1111";
     public Connection jdbcConnection;
+    public static PropertyDB propertyDB = new PropertyDB();
+    public static SessionFactory sessionFactory;
 
-    public static final String HIBERNATE_DIALECT = "org.hibernate.dialect.PostgreSQL10Dialect";
-    public static final String HIBERNATE_DRIVER = "org.postgresql.Driver";
-    public static final String HIBERNATE_URL = "jdbc:postgresql://localhost:5432/ft";
-    private static final String hibernate_show_sql = "true";
-    private static final String hibernate_hbm2ddl_auto = "update";
-    private static SessionFactory sessionFactory;
     private static Configuration configuration = new Configuration();
 
     private DBHelper() { }
@@ -42,7 +36,7 @@ public class DBHelper {
                 } catch (ClassNotFoundException e) {
                     throw new SQLException(e);
                 }
-                jdbcConnection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+                jdbcConnection = DriverManager.getConnection(propertyDB.DB_URL, propertyDB.DB_USER, propertyDB.DB_PASSWORD);
                 System.out.println("Connection");
             }
             return jdbcConnection;
@@ -55,13 +49,13 @@ public class DBHelper {
     }
 
     public static SessionFactory getConfiguration() {
-        configuration.setProperty("hibernate.dialect", HIBERNATE_DIALECT);
-        configuration.setProperty("hibernate.connection.driver_class", HIBERNATE_DRIVER);
-        configuration.setProperty("hibernate.connection.url", DB_URL);
-        configuration.setProperty("hibernate.connection.username", DB_USER);
-        configuration.setProperty("hibernate.connection.password", DB_PASSWORD);
-        configuration.setProperty("hibernate.show_sql", hibernate_show_sql);
-        configuration.setProperty("hibernate.hbm2ddl.auto", hibernate_hbm2ddl_auto);
+        configuration.setProperty("hibernate.dialect", propertyDB.HIBERNATE_DIALECT);
+        configuration.setProperty("hibernate.connection.driver_class", propertyDB.HIBERNATE_DRIVER);
+        configuration.setProperty("hibernate.connection.url", propertyDB.DB_URL);
+        configuration.setProperty("hibernate.connection.username", propertyDB.DB_USER);
+        configuration.setProperty("hibernate.connection.password", propertyDB.DB_PASSWORD);
+        configuration.setProperty("hibernate.show_sql", propertyDB.hibernate_show_sql);
+        configuration.setProperty("hibernate.hbm2ddl.auto", propertyDB.hibernate_hbm2ddl_auto);
 
         if (sessionFactory == null) {
             try {

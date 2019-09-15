@@ -7,17 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAOHibernateImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAOJDBCImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOHibernateFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/properties/PropertyDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/DBHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Error.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/UserDataSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/UserDataSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/useraction/UserAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/useraction/UserAddServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAOHibernateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAOHibernateImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAOImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAOJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAOJDBCImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factories/UserDAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factories/UserDAOHibernateFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOHibernateFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factories/UserDAOJDBCFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOJDBCFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/properties/PropertyDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/PropertyDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -474,7 +473,8 @@
       <workItem from="1567527758471" duration="1370000" />
       <workItem from="1567612882879" duration="1200000" />
       <workItem from="1567954224975" duration="4576000" />
-      <workItem from="1568446893967" duration="1225000" />
+      <workItem from="1568446893967" duration="6643000" />
+      <workItem from="1568541891892" duration="3563000" />
     </task>
     <task id="LOCAL-00001" summary="New Task One 21/05/2019-1100">
       <created>1558423242276</created>
@@ -658,7 +658,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567441483736</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="NewTask2 02.09.19">
+      <created>1568460566914</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1568460566914</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

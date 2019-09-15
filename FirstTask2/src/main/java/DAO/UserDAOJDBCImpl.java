@@ -1,6 +1,7 @@
 package DAO;
 
 import model.UserDataSet;
+import service.DBHelper;
 import service.DBSessionFactory;
 
 import java.sql.*;
@@ -13,6 +14,7 @@ public class UserDAOJDBCImpl implements UserDAO {
     private final static String JDBC_PASSWORD = "1111";
     private Connection jdbcConnection;
 
+    private DBHelper helper;
     private DBSessionFactory connection = new DBSessionFactory();
 
     @Override
@@ -20,7 +22,8 @@ public class UserDAOJDBCImpl implements UserDAO {
 
         String sql = "INSERT INTO users (login, password, name) VALUES (?,?,?)";
 
-        jdbcConnection = connection.connect();
+        //jdbcConnection = connection.connect();
+        jdbcConnection = helper.getConnection();
 
         PreparedStatement statement = jdbcConnection.prepareStatement(sql);
         statement.setString(1, uds.getLogin());
@@ -29,7 +32,8 @@ public class UserDAOJDBCImpl implements UserDAO {
         statement.executeUpdate();
         statement.close();
 
-        connection.disconnect(jdbcConnection);
+        helper.disconnect(jdbcConnection);
+        //connection.disconnect(jdbcConnection);
     }
 
     @Override

@@ -1,18 +1,28 @@
 package service;
 
 import DAO.UserDAO;
-import DAO.UserDAOImpl;
 import exception.DBException;
+import factories.UserDAOHibernateFactory;
+import factories.UserDAOJDBCFactory;
 import model.UserDataSet;
+import properties.PropertyDB;
 
 import java.sql.SQLException;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
 
-    private UserDAO userDAO = new UserDAOImpl();
+    private PropertyDB propertyDB = new PropertyDB();
 
-    public UserServiceImpl() {}
+    private UserDAO userDAO;
+
+    public UserServiceImpl() {
+        if (propertyDB.useHibernate) {
+            userDAO = new UserDAOHibernateFactory().workDAO();
+        } else {
+            userDAO = new UserDAOJDBCFactory().workDAO();
+        }
+    }
 
     @Override
     public String addUser(UserDataSet uds) throws DBException, SQLException {
