@@ -10,10 +10,6 @@ import java.sql.*;
 import java.util.List;
 
 public class UserDAOHibernateImpl implements UserDAO {
-    private final static String JDBC_URL = "jdbc:postgresql://localhost:5432/ft";
-    private final static String JDBC_USER = "postgres";
-    private final static String JDBC_PASSWORD = "1111";
-    private Connection jdbcConnection;
     private DBHelper helper;
     private Session session;
 

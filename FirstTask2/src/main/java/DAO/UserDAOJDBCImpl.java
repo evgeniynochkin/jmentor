@@ -2,7 +2,6 @@ package DAO;
 
 import model.UserDataSet;
 import service.DBHelper;
-import service.DBSessionFactory;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -14,16 +13,14 @@ public class UserDAOJDBCImpl implements UserDAO {
     private final static String JDBC_PASSWORD = "1111";
     private Connection jdbcConnection;
 
-    private DBHelper helper;
-    private DBSessionFactory connection = new DBSessionFactory();
+    private DBHelper helper = DBHelper.getInstance();
 
     @Override
     public void addUser(UserDataSet uds) throws SQLException {
 
         String sql = "INSERT INTO users (login, password, name) VALUES (?,?,?)";
 
-        //jdbcConnection = connection.connect();
-        jdbcConnection = helper.getConnection();
+        this.jdbcConnection = helper.getConnection();
 
         PreparedStatement statement = jdbcConnection.prepareStatement(sql);
         statement.setString(1, uds.getLogin());
@@ -33,14 +30,13 @@ public class UserDAOJDBCImpl implements UserDAO {
         statement.close();
 
         helper.disconnect(jdbcConnection);
-        //connection.disconnect(jdbcConnection);
     }
 
     @Override
     public void updateUser(UserDataSet uds, Integer id) throws SQLException {
         String sql = "UPDATE users SET name = ?, login = ?, password = ? WHERE id=?";
 
-        jdbcConnection = connection.connect();
+        this.jdbcConnection = helper.getConnection();
 
         PreparedStatement statement = jdbcConnection.prepareStatement(sql);
         statement.setString(1, uds.getName());
@@ -50,21 +46,21 @@ public class UserDAOJDBCImpl implements UserDAO {
         statement.executeUpdate();
         statement.close();
 
-        connection.disconnect(jdbcConnection);
+        helper.disconnect(jdbcConnection);
     }
 
     @Override
     public void removeUser(int id) throws SQLException {
         String sql = "DELETE FROM users WHERE id=?";
 
-        jdbcConnection = connection.connect();
+        this.jdbcConnection = helper.getConnection();
 
         PreparedStatement statement = jdbcConnection.prepareStatement(sql);
         statement.setInt(1, id);
         statement.executeUpdate();
         statement.close();
 
-        connection.disconnect(jdbcConnection);
+        helper.disconnect(jdbcConnection);
     }
 
     @Override
@@ -72,7 +68,7 @@ public class UserDAOJDBCImpl implements UserDAO {
         UserDataSet uds = new UserDataSet();
         String sql = "SELECT * FROM users WHERE login=?";
 
-        jdbcConnection = connection.connect();
+        this.jdbcConnection = helper.getConnection();
 
         PreparedStatement statement = jdbcConnection.prepareStatement(sql);
         statement.setString(1, fLogin);
@@ -86,7 +82,7 @@ public class UserDAOJDBCImpl implements UserDAO {
 
         resultSet.close();
         statement.close();
-        connection.disconnect(jdbcConnection);
+        helper.disconnect(jdbcConnection);
 
         return uds;
     }
@@ -96,7 +92,7 @@ public class UserDAOJDBCImpl implements UserDAO {
         UserDataSet uds = new UserDataSet();
         String sql = "SELECT * FROM users WHERE id=?";
 
-        jdbcConnection = connection.connect();
+        this.jdbcConnection = helper.getConnection();
 
         PreparedStatement statement = jdbcConnection.prepareStatement(sql);
         statement.setInt(1, id);
@@ -110,7 +106,7 @@ public class UserDAOJDBCImpl implements UserDAO {
 
         resultSet.close();
         statement.close();
-        connection.disconnect(jdbcConnection);
+        helper.disconnect(jdbcConnection);
 
         return uds;
     }
@@ -121,7 +117,7 @@ public class UserDAOJDBCImpl implements UserDAO {
 
         String sql = "SELECT * FROM users";
 
-        jdbcConnection = connection.connect();
+        this.jdbcConnection = helper.getConnection();
 
         Statement statement = jdbcConnection.createStatement();
         ResultSet resultSet = statement.executeQuery(sql);
@@ -139,7 +135,7 @@ public class UserDAOJDBCImpl implements UserDAO {
         resultSet.close();
         statement.close();
 
-        connection.disconnect(jdbcConnection);
+        helper.disconnect(jdbcConnection);
 
         return usersList;
     }

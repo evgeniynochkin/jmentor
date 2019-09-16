@@ -32,7 +32,7 @@ public class DBHelper {
 
             if (jdbcConnection == null || jdbcConnection.isClosed()) {
                 try {
-                    Class.forName("org.postgresql.Driver");
+                    Class.forName(propertyDB.DB_DRIVER);
                 } catch (ClassNotFoundException e) {
                     throw new SQLException(e);
                 }
@@ -50,7 +50,7 @@ public class DBHelper {
 
     public static SessionFactory getConfiguration() {
         configuration.setProperty("hibernate.dialect", propertyDB.HIBERNATE_DIALECT);
-        configuration.setProperty("hibernate.connection.driver_class", propertyDB.HIBERNATE_DRIVER);
+        configuration.setProperty("hibernate.connection.driver_class", propertyDB.DB_DRIVER);
         configuration.setProperty("hibernate.connection.url", propertyDB.DB_URL);
         configuration.setProperty("hibernate.connection.username", propertyDB.DB_USER);
         configuration.setProperty("hibernate.connection.password", propertyDB.DB_PASSWORD);
