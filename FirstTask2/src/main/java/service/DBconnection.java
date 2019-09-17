@@ -10,8 +10,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBHelper {
-    private static DBHelper instance;
+public class DBconnection {
+    private static DBconnection instance;
 
     public Connection jdbcConnection;
     public static PropertyDB propertyDB = new PropertyDB();
@@ -19,11 +19,11 @@ public class DBHelper {
 
     private static Configuration configuration = new Configuration();
 
-    private DBHelper() { }
+    private DBconnection() { }
 
-    public static synchronized DBHelper getInstance() {
+    public static synchronized DBconnection getInstance() {
         if (instance == null) {
-            instance = new DBHelper();
+            instance = new DBconnection();
         }
         return instance;
     }

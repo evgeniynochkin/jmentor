@@ -6,7 +6,7 @@ import DAO.UserDAOJDBCImpl;
 public class UserDAOJDBCFactory implements UserDAOFactory {
 
     @Override
-    public UserDAO workDAO() {
+    public UserDAO getDAO() {
         return new UserDAOJDBCImpl();
     }
 }

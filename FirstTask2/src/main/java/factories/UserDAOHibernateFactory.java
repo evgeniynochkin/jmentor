@@ -6,7 +6,7 @@ import DAO.UserDAOHibernateImpl;
 public class UserDAOHibernateFactory implements UserDAOFactory {
 
     @Override
-    public UserDAO workDAO() {
+    public UserDAO getDAO() {
         return new UserDAOHibernateImpl();
     }
 }

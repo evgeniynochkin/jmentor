@@ -10,10 +10,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAOHibernateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAOHibernateImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAOJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAOJDBCImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/properties/PropertyDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/PropertyDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DBHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DBSessionFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/HibernateSessionFactoryUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factories/UserDAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factories/UserDAOHibernateFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOHibernateFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factories/UserDAOJDBCFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOJDBCFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DBconnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -472,7 +473,8 @@
       <workItem from="1567954224975" duration="4576000" />
       <workItem from="1568446893967" duration="6643000" />
       <workItem from="1568541891892" duration="3818000" />
-      <workItem from="1568611485353" duration="2800000" />
+      <workItem from="1568611485353" duration="4435000" />
+      <workItem from="1568721344659" duration="1753000" />
     </task>
     <task id="LOCAL-00001" summary="New Task One 21/05/2019-1100">
       <created>1558423242276</created>
@@ -670,7 +672,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568571748599</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="NewTask2 16.09.19">
+      <created>1568631739299</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1568631739299</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,7 +699,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New Task One 21/05/2019-1100" />
     <MESSAGE value="New Task One 21/05/2019-1900" />
     <MESSAGE value="New Task One 21/05/2019-1930" />
     <MESSAGE value="NewTask2 25.05.19-1500" />
@@ -715,7 +723,8 @@
     <MESSAGE value="NewTask2 01.09.19" />
     <MESSAGE value="NewTask2 02.09.19" />
     <MESSAGE value="NewTask2 15.09.19" />
-    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 15.09.19" />
+    <MESSAGE value="NewTask2 16.09.19" />
+    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 16.09.19" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

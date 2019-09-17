@@ -18,9 +18,9 @@ public class UserServiceImpl implements UserService {
 
     public UserServiceImpl() {
         if (propertyDB.useHibernate) {
-            userDAO = new UserDAOHibernateFactory().workDAO();
+            userDAO = new UserDAOHibernateFactory().getDAO();
         } else {
-            userDAO = new UserDAOJDBCFactory().workDAO();
+            userDAO = new UserDAOJDBCFactory().getDAO();
         }
     }
 
