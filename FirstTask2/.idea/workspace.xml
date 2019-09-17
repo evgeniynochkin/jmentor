@@ -6,13 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factories/UserDAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factories/UserDAOHibernateFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOHibernateFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factories/UserDAOJDBCFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOJDBCFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -471,7 +465,7 @@
       <workItem from="1568446893967" duration="6643000" />
       <workItem from="1568541891892" duration="3818000" />
       <workItem from="1568611485353" duration="4435000" />
-      <workItem from="1568721344659" duration="3403000" />
+      <workItem from="1568721344659" duration="4288000" />
     </task>
     <task id="LOCAL-00001" summary="New Task One 21/05/2019-1100">
       <created>1558423242276</created>
@@ -683,7 +677,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568723493695</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="NewTask2 17.09.19 (2)">
+      <created>1568725848737</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1568725848737</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -703,7 +704,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New Task One 21/05/2019-1930" />
     <MESSAGE value="NewTask2 25.05.19-1500" />
     <MESSAGE value="NewTask2 28.05.19-1500" />
     <MESSAGE value="NewTask2 06.06.19" />
@@ -728,7 +728,8 @@
     <MESSAGE value="NewTask2 15.09.19" />
     <MESSAGE value="NewTask2 16.09.19" />
     <MESSAGE value="NewTask2 17.09.19" />
-    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 17.09.19" />
+    <MESSAGE value="NewTask2 17.09.19 (2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 17.09.19 (2)" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
