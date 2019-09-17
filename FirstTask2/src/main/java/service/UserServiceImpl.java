@@ -1,9 +1,10 @@
 package service;
 
 import DAO.UserDAO;
+import DAO.UserDAOHibernateImpl;
 import exception.DBException;
-import factories.UserDAOHibernateFactory;
-import factories.UserDAOJDBCFactory;
+import factories.UserDAOFactory;
+import factories.UserDAOFactoryImpl;
 import model.UserDataSet;
 import properties.PropertyDB;
 
@@ -13,14 +14,15 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     private PropertyDB propertyDB = new PropertyDB();
+    private UserDAOFactory userDAOFactory = new UserDAOFactoryImpl();
 
     private UserDAO userDAO;
 
     public UserServiceImpl() {
         if (propertyDB.useHibernate) {
-            userDAO = new UserDAOHibernateFactory().getDAO();
+            userDAO = userDAOFactory.getHibernateDAO();
         } else {
-            userDAO = new UserDAOJDBCFactory().getDAO();
+            userDAO = userDAOFactory.getJDBCDAO();
         }
     }
 
