@@ -6,7 +6,7 @@ import factories.UserDAOJDBCFactory;
 
 public class PropertyWork {
 
-    public PropertyDB propertyDB;
+    public PropertyDB propertyDB = new PropertyDB();
 
     public UserDAOFactory GetDAO() {
         if (propertyDB.useHibernate) {

@@ -7,15 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/properties/PropertyWork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAOHibernateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAOHibernateImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAOJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAOJDBCImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factories/UserDAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factories/UserDAOFactoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factories/UserDAOHibernateFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOHibernateFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factories/UserDAOJDBCFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/UserDAOJDBCFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DBconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DBMakeCon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/properties/PropertyWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/properties/PropertyWork.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -477,7 +469,7 @@
       <workItem from="1568541891892" duration="3818000" />
       <workItem from="1568611485353" duration="4435000" />
       <workItem from="1568721344659" duration="8778000" />
-      <workItem from="1568786604761" duration="3066000" />
+      <workItem from="1568786604761" duration="3323000" />
     </task>
     <task id="LOCAL-00001" summary="New Task One 21/05/2019-1100">
       <created>1558423242276</created>
@@ -703,7 +695,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568726821499</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="NewTask2 18.09.19 (3)">
+      <created>1568803177331</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1568803177331</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -723,7 +722,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="NewTask2 28.05.19-1500" />
     <MESSAGE value="NewTask2 06.06.19" />
     <MESSAGE value="NewTask2 18.06.19" />
     <MESSAGE value="NewTask2 19.06.19" />
@@ -748,7 +746,8 @@
     <MESSAGE value="NewTask2 17.09.19" />
     <MESSAGE value="NewTask2 17.09.19 (2)" />
     <MESSAGE value="NewTask2 17.09.19 (3)" />
-    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 17.09.19 (3)" />
+    <MESSAGE value="NewTask2 18.09.19 (3)" />
+    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 18.09.19 (3)" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
