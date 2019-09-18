@@ -1,10 +1,8 @@
-package properties;
+package factories;
 
-import factories.UserDAOFactory;
-import factories.UserDAOHibernateFactory;
-import factories.UserDAOJDBCFactory;
+import properties.PropertyDB;
 
-public class PropertyWork {
+public class ChooseFactory {
 
     public PropertyDB propertyDB = new PropertyDB();
 

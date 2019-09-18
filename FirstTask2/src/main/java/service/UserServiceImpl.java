@@ -4,7 +4,7 @@ import DAO.UserDAO;
 import exception.DBException;
 import model.UserDataSet;
 import properties.PropertyDB;
-import properties.PropertyWork;
+import factories.ChooseFactory;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService {
     private UserDAO userDAO;
 
     public UserServiceImpl() {
-        userDAO = new PropertyWork().GetDAO().getDAO();
+        userDAO = new ChooseFactory().GetDAO().getDAO();
     }
 
     @Override
