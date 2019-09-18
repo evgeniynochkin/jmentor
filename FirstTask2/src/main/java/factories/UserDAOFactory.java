@@ -2,9 +2,7 @@ package factories;
 
 import DAO.UserDAO;
 
-public interface UserDAOFactory {
-     UserDAO getHibernateDAO();
-     UserDAO getJDBCDAO();
+public abstract class UserDAOFactory {
 
-//     UserDAO getDAO();
+     public abstract UserDAO getDAO();
 }

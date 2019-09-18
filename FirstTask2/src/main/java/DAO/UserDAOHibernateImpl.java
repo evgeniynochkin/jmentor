@@ -4,16 +4,16 @@ import model.UserDataSet;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-import service.DBconnection;
+import service.DBMakeCon;
 
 import java.sql.*;
 import java.util.List;
 
 public class UserDAOHibernateImpl implements UserDAO {
-    private DBconnection dBconnection;
+    private DBMakeCon dbMakeCon;
     private Session session;
 
-    public void openSession() { this.session = dBconnection.getConfiguration().openSession(); }
+    public void openSession() { this.session = dbMakeCon.getConfiguration().openSession(); }
 
     public void closeSession() {
         this.session.close();

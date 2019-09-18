@@ -1,12 +1,13 @@
 package service;
 
 import DAO.UserDAO;
-import DAO.UserDAOHibernateImpl;
 import exception.DBException;
 import factories.UserDAOFactory;
-import factories.UserDAOFactoryImpl;
+import factories.UserDAOHibernateFactory;
+import factories.UserDAOJDBCFactory;
 import model.UserDataSet;
 import properties.PropertyDB;
+import properties.PropertyWork;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -14,16 +15,13 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     private PropertyDB propertyDB = new PropertyDB();
-    private UserDAOFactory userDAOFactory = new UserDAOFactoryImpl();
+    private PropertyWork propertyWork = new PropertyWork();
 
     private UserDAO userDAO;
 
     public UserServiceImpl() {
-        if (propertyDB.useHibernate) {
-            userDAO = userDAOFactory.getHibernateDAO();
-        } else {
-            userDAO = userDAOFactory.getJDBCDAO();
-        }
+//        userDAO = GetDAO().getDAO();
+        userDAO = propertyWork.GetDAO().getDAO();
     }
 
     @Override
@@ -73,5 +71,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserDataSet> findAllUsers() throws DBException, SQLException {
         return userDAO.findAll();
+    }
+
+    private UserDAOFactory GetDAO() {
+        if (propertyDB.useHibernate) {
+            return new UserDAOHibernateFactory();
+        } else {
+            return new UserDAOJDBCFactory();
+        }
     }
 }

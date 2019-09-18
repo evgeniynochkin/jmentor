@@ -10,8 +10,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBconnection {
-    private static DBconnection instance;
+public class DBMakeCon {
+    private static DBMakeCon instance;
 
     public Connection jdbcConnection;
     public static PropertyDB propertyDB = new PropertyDB();
@@ -19,11 +19,11 @@ public class DBconnection {
 
     private static Configuration configuration = new Configuration();
 
-    private DBconnection() { }
+    private DBMakeCon() { }
 
-    public static synchronized DBconnection getInstance() {
+    public static synchronized DBMakeCon getInstance() {
         if (instance == null) {
-            instance = new DBconnection();
+            instance = new DBMakeCon();
         }
         return instance;
     }
