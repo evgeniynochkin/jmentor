@@ -54,8 +54,8 @@ public class DBMakeCon {
         configuration.setProperty("hibernate.connection.url", propertyDB.DB_URL);
         configuration.setProperty("hibernate.connection.username", propertyDB.DB_USER);
         configuration.setProperty("hibernate.connection.password", propertyDB.DB_PASSWORD);
-        configuration.setProperty("hibernate.show_sql", propertyDB.hibernate_show_sql);
-        configuration.setProperty("hibernate.hbm2ddl.auto", propertyDB.hibernate_hbm2ddl_auto);
+        configuration.setProperty("hibernate.show_sql", propertyDB.HIBERNATE_SHOW_SQL);
+        configuration.setProperty("hibernate.hbm2ddl.auto", propertyDB.HIBERNATE_HBM_2_DDL_AUTO);
 
         if (sessionFactory == null) {
             try {

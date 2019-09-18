@@ -3,15 +3,12 @@ package service;
 import DAO.UserDAO;
 import exception.DBException;
 import model.UserDataSet;
-import properties.PropertyDB;
 import factories.ChooseFactory;
 
 import java.sql.SQLException;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
-
-    private PropertyDB propertyDB = new PropertyDB();
 
     private UserDAO userDAO;
 

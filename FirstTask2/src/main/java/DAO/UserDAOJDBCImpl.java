@@ -8,9 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAOJDBCImpl implements UserDAO {
-    private final static String JDBC_URL = "jdbc:postgresql://localhost:5432/ft";
-    private final static String JDBC_USER = "postgres";
-    private final static String JDBC_PASSWORD = "1111";
+
     private Connection jdbcConnection;
 
     private DBMakeCon dbMakeCon = DBMakeCon.getInstance();
