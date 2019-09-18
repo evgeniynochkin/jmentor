@@ -4,7 +4,6 @@ import model.UserDataSet;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import properties.PropertyDB;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -19,13 +18,18 @@ public class DBMakeCon {
     static FileInputStream fis;
     static Properties properties = new Properties();
 
-    public static String driver;
-    public static String url;
-    public static String user;
-    public static String password;
+    static String driver;
+    static String url;
+    static String user;
+    static String password;
+
+    static String hibDialect;
+    static String hibShowSQL;
+    static String hibHBM2DLLAuto;
+
+    public static String useORM;
 
     public static Connection jdbcConnection;
-    public static PropertyDB propertyDB = new PropertyDB();
     public static SessionFactory sessionFactory;
 
     private static Configuration configuration = new Configuration();
@@ -45,8 +49,6 @@ public class DBMakeCon {
             if (jdbcConnection == null || jdbcConnection.isClosed()) {
                 getProperties();
                 try {
-//                    getProperties();
-//                    Class.forName(propertyDB.DB_DRIVER);
                     Class.forName(driver);
                 } catch (ClassNotFoundException e) {
                     throw new SQLException(e);
@@ -64,13 +66,15 @@ public class DBMakeCon {
     }
 
     public static SessionFactory getConfiguration() {
-        configuration.setProperty("hibernate.dialect", propertyDB.HIBERNATE_DIALECT);
+        getHibernateProperties();
+
+        configuration.setProperty("hibernate.dialect", hibDialect);
         configuration.setProperty("hibernate.connection.driver_class", driver);
         configuration.setProperty("hibernate.connection.url", url);
         configuration.setProperty("hibernate.connection.username", user);
         configuration.setProperty("hibernate.connection.password", password);
-        configuration.setProperty("hibernate.show_sql", propertyDB.HIBERNATE_SHOW_SQL);
-        configuration.setProperty("hibernate.hbm2ddl.auto", propertyDB.HIBERNATE_HBM_2_DDL_AUTO);
+        configuration.setProperty("hibernate.show_sql", hibShowSQL);
+        configuration.setProperty("hibernate.hbm2ddl.auto", hibHBM2DLLAuto);
 
         if (sessionFactory == null) {
             try {
@@ -87,18 +91,26 @@ public class DBMakeCon {
 
     public static void getProperties() {
         try {
-//            fis = new FileInputStream("src/main/resources/config.properties");
             String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
 
             fis = new FileInputStream(rootPath + "config.properties");
             properties.load(fis);
 
+            useORM = properties.getProperty("use.orm");
+
             driver = properties.getProperty("db.driver");
             url = properties.getProperty("db.url");
             user = properties.getProperty("db.user");
             password = properties.getProperty("db.password");
+
         } catch (IOException e) {
             System.err.println("Файл свойств отсутсвует");
         }
+    }
+
+    static void getHibernateProperties() {
+        hibDialect = properties.getProperty("hib.dialect");
+        hibShowSQL = properties.getProperty("hib.show_sql");
+        hibHBM2DLLAuto = properties.getProperty("hib.hbm2dllauto");
     }
 }
