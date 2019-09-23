@@ -14,9 +14,14 @@
 <body>
     <center>
         <h1>User Manager</h1>
-        <h2>
-            <a href="${pageContext.servletContext.contextPath}/hello">Список пользователей</a>
-        </h2>
+        <h3>
+            <c:if test="${uds == null}">
+                <a href="${pageContext.servletContext.contextPath}/start">Вход </a>
+            </c:if>
+            <c:if test="${uds != null}">
+                <a href="${pageContext.servletContext.contextPath}/hello">Список пользователей</a>
+            </c:if>
+        </h3>
     </center>
     <div align="center">
         <c:if test="${uds != null}">

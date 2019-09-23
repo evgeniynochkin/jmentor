@@ -19,6 +19,9 @@ public class UserDataSet {
     @Column (name = "password")
     private String password;
 
+    @Column (name = "role", unique = true)
+    private String role;
+
     public UserDataSet() {}
 
     public void setId(Integer id) { this.id = id; }
@@ -29,6 +32,8 @@ public class UserDataSet {
 
     public void setPassword(String password) { this.password = password; }
 
+    public void setRole(String role) { this.role = role; }
+
     public int getId() { return id; }
 
     public String getName() { return name; }
@@ -37,6 +42,8 @@ public class UserDataSet {
 
     public String getPassword() { return password; }
 
+    public String getRole() { return role; }
+
     @Override
     public String toString() {
         return "model.User{" +
@@ -44,6 +51,7 @@ public class UserDataSet {
                 ", name='" + name + '\'' +
                 ", login='" + login + '\'' +
                 ", password=" + password +
+                ", role=" + role +
                 '}';
     }
 }

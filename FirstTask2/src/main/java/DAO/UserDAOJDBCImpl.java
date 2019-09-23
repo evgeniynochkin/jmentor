@@ -16,7 +16,7 @@ public class UserDAOJDBCImpl implements UserDAO {
     @Override
     public void addUser(UserDataSet uds) throws SQLException {
 
-        String sql = "INSERT INTO users (login, password, name) VALUES (?,?,?)";
+        String sql = "INSERT INTO users (login, password, name, role) VALUES (?,?,?,?)";
 
         this.jdbcConnection = dbMakeCon.getConnection();
 
@@ -24,6 +24,7 @@ public class UserDAOJDBCImpl implements UserDAO {
         statement.setString(1, uds.getLogin());
         statement.setString(2, uds.getPassword());
         statement.setString(3, uds.getName());
+        statement.setString(4, uds.getRole());
         statement.executeUpdate();
         statement.close();
 

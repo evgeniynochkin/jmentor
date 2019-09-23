@@ -49,22 +49,15 @@ public class UserAddServlet extends HttpServlet {
         String login = request.getParameter("login");
         String password = request.getParameter("password");
         String name = request.getParameter("name");
-
-//        for (UserDataSet user : uList) {
-//            if (user.getLogin().equals(login)) {
-//                response.sendRedirect("http://localhost:80/FirstTask2_war/error");
-//            } else if (user.getPassword().equals(password)) {
-//                response.sendRedirect("http://localhost:80/FirstTask2_war/error");
-//            }
-//        }
+        String role = "user";
 
         UserDataSet uds = new UserDataSet();
         uds.setLogin(login);
         uds.setPassword(password);
         uds.setName(name);
+        uds.setRole(role);
 
         usi.addUser(uds);
-//        response.sendRedirect(String.format("%s%s", request.getServletPath(), "/hello"));
         response.sendRedirect("http://localhost:80/FirstTask2_war/hello");
     }
 }

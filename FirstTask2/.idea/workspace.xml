@@ -7,11 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/SecurityFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/SecurityUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/UrlPatternUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/UserRoleRequestWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/StartServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Start.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factories/ChooseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/ChooseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/properties/PropertyDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DBMakeCon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DBMakeCon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAOJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAOJDBCImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/UserDataSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/UserDataSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/useraction/UserAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/useraction/UserAddServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/UserForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UserForm.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,8 +100,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Interface" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -137,7 +144,7 @@
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.34439024" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -246,7 +253,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.24" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.24" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:80/FirstTask2_war/hello" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:80/FirstTask2_war/start" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -428,7 +435,12 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2416e3d6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -472,7 +484,10 @@
       <workItem from="1568541891892" duration="3818000" />
       <workItem from="1568611485353" duration="4435000" />
       <workItem from="1568721344659" duration="8778000" />
-      <workItem from="1568786604761" duration="13174000" />
+      <workItem from="1568786604761" duration="14668000" />
+      <workItem from="1568988000634" duration="2513000" />
+      <workItem from="1569135375841" duration="4545000" />
+      <workItem from="1569255258424" duration="5141000" />
     </task>
     <task id="LOCAL-00001" summary="New Task One 21/05/2019-1100">
       <created>1558423242276</created>
@@ -733,7 +748,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568827108035</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="NewTask2 18.09.19 (6)">
+      <created>1568829260252</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1568829260252</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -753,7 +775,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="NewTask2 23.06.19" />
     <MESSAGE value="NewTask2 25.06.19" />
     <MESSAGE value="NewTask2 26.06.19" />
     <MESSAGE value="NewTask2 03.07.19" />
@@ -778,9 +799,19 @@
     <MESSAGE value="NewTask2 18.09.19 (3)" />
     <MESSAGE value="NewTask2 18.09.19 (4)" />
     <MESSAGE value="NewTask2 18.09.19 (5)" />
-    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 18.09.19 (5)" />
+    <MESSAGE value="NewTask2 18.09.19 (6)" />
+    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 18.09.19 (6)" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/servlet/useraction/UserAddServlet.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
         <watch expression="view" />
