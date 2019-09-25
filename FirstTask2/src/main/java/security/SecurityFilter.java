@@ -1,7 +1,9 @@
-package service;
+package security;
 
 import DAO.UserDAO;
 import model.UserDataSet;
+import service.AppUtils;
+import service.UserRoleRequestWrapper;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -48,9 +50,30 @@ public class SecurityFilter implements Filter {
 
             wrapRequest = new UserRoleRequestWrapper(userName, userRole, request);
         }
-    }
 
-    if (Se)
+        if (SecurityUtils.isSecurityPage(request)) {
+
+            if (uds == null) {
+
+                String requestUri = request.getRequestURI();
+
+                int redirectId = AppUtils.storeRedirectAfterLoginUrl(request.getSession(), requestUri);
+
+                response.sendRedirect(wrapRequest.getContextPath() + "/login?redirectId=" + redirectId);
+                return;
+            }
+
+            boolean hasPermission = SecurityUtils.hasPermission(wrapRequest);
+            if (!hasPermission) {
+                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/webapp/accessDeniedView.jsp");
+
+                dispatcher.forward(request, response);
+                return;
+            }
+        }
+
+        filterChain.doFilter(wrapRequest, response);
+    }
 
     @Override
     public void destroy() {

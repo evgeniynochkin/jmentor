@@ -13,19 +13,21 @@
 </head>
 <body>
 <center>
+    <jsp:include page="Menu.jsp"></jsp:include>
     <h1>Введите данные</h1>
 </center>
 <div align="center">
-    <form>
+    <form method="POST" action="${pageContext.request.contextPath}/start">
+        <input type="hidden" name="redirectId" value="${param.redirectId}" />
             <table border="1" cellpadding="4">
                 <tr>
-                    <th>Login: </th>
+                    <th>Логин: </th>
                     <td>
                         <input type="text" name="login" size="45" value="<c:out value='${uds.login}' />" />
                     </td>
                 </tr>
                 <tr>
-                    <th>Password: </th>
+                    <th>Пароль: </th>
                     <td>
                         <input type="text" name="password" size="45" value="<c:out value='${uds.password}' />" />
                     </td>
@@ -33,6 +35,7 @@
                 <tr>
                     <td colspan="2" align="center">
                         <input type="submit" value="Enter" />
+                        <a href="${pageContext.request.contextPath}/" >Отменить</a>
                     </td>
                 </tr>
             </table>

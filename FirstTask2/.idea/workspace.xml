@@ -7,18 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/SecurityFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/SecurityUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/UrlPatternUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/UserRoleRequestWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/StartServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Start.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/security/SecurityUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/AppUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Menu.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/userInfoView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAOJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAOJDBCImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/UserDataSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/UserDataSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/useraction/UserAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/useraction/UserAddServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/UserForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UserForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/security/SecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/SecurityUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Start.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Start.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -487,7 +485,9 @@
       <workItem from="1568786604761" duration="14668000" />
       <workItem from="1568988000634" duration="2513000" />
       <workItem from="1569135375841" duration="4545000" />
-      <workItem from="1569255258424" duration="5141000" />
+      <workItem from="1569255258424" duration="5191000" />
+      <workItem from="1569345982718" duration="4482000" />
+      <workItem from="1569429359180" duration="4874000" />
     </task>
     <task id="LOCAL-00001" summary="New Task One 21/05/2019-1100">
       <created>1558423242276</created>
@@ -755,7 +755,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568829260252</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="NewTask2 23.09.19">
+      <created>1569271633406</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1569271633406</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -775,7 +782,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="NewTask2 25.06.19" />
     <MESSAGE value="NewTask2 26.06.19" />
     <MESSAGE value="NewTask2 03.07.19" />
     <MESSAGE value="NewTask2 07.07.19" />
@@ -800,7 +806,8 @@
     <MESSAGE value="NewTask2 18.09.19 (4)" />
     <MESSAGE value="NewTask2 18.09.19 (5)" />
     <MESSAGE value="NewTask2 18.09.19 (6)" />
-    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 18.09.19 (6)" />
+    <MESSAGE value="NewTask2 23.09.19" />
+    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 23.09.19" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
