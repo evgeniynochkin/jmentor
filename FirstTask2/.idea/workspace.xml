@@ -7,15 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/security/SecurityUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/AppUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Menu.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/userInfoView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/UserInfoServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/security/SecurityFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/SecurityUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/AppUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AppUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/StartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/StartServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Start.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Start.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -251,7 +248,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.24" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.24" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:80/FirstTask2_war/start" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:80/FirstTask2_war/login" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -262,7 +259,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_21_FirstTask2_3" />
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_21_FirstTask2_5" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -433,12 +430,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2416e3d6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -487,7 +479,10 @@
       <workItem from="1569135375841" duration="4545000" />
       <workItem from="1569255258424" duration="5191000" />
       <workItem from="1569345982718" duration="4482000" />
-      <workItem from="1569429359180" duration="4874000" />
+      <workItem from="1569429359180" duration="5618000" />
+      <workItem from="1569512649951" duration="599000" />
+      <workItem from="1569666659585" duration="599000" />
+      <workItem from="1569751438852" duration="7918000" />
     </task>
     <task id="LOCAL-00001" summary="New Task One 21/05/2019-1100">
       <created>1558423242276</created>
@@ -762,7 +757,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569271633406</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="NewTask2 25.09.19">
+      <created>1569434371427</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1569434371427</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -782,7 +784,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="NewTask2 26.06.19" />
     <MESSAGE value="NewTask2 03.07.19" />
     <MESSAGE value="NewTask2 07.07.19" />
     <MESSAGE value="NewTask2 10.07.19" />
@@ -807,7 +808,8 @@
     <MESSAGE value="NewTask2 18.09.19 (5)" />
     <MESSAGE value="NewTask2 18.09.19 (6)" />
     <MESSAGE value="NewTask2 23.09.19" />
-    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 23.09.19" />
+    <MESSAGE value="NewTask2 25.09.19" />
+    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 25.09.19" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

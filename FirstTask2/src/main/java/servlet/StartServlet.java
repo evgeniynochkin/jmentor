@@ -14,12 +14,14 @@ public class StartServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         doGet(request, response);
     }
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         RequestDispatcher dispatcher = request.getRequestDispatcher("/Start.jsp");
         dispatcher.forward(request, response);
     }

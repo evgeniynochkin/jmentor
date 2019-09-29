@@ -17,13 +17,13 @@
     <h1>Введите данные</h1>
 </center>
 <div align="center">
-    <form method="POST" action="${pageContext.request.contextPath}/start">
+    <form method="POST" action="${pageContext.request.contextPath}/login">
         <input type="hidden" name="redirectId" value="${param.redirectId}" />
             <table border="1" cellpadding="4">
                 <tr>
                     <th>Логин: </th>
                     <td>
-                        <input type="text" name="login" size="45" value="<c:out value='${uds.login}' />" />
+                        <input type="text" name="userLogin" size="45" value="<c:out value='${uds.login}' />" />
                     </td>
                 </tr>
                 <tr>

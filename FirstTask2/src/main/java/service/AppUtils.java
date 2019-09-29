@@ -18,7 +18,7 @@ public class AppUtils {
         session.setAttribute("loginedUser", uds);
     }
 
-    public static UserDataSet getLoginUser(HttpSession session) {
+    public static UserDataSet getLoginedUser(HttpSession session) {
         UserDataSet usd = (UserDataSet) session.getAttribute("loginedUser");
         return usd;
     }

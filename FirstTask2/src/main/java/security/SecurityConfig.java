@@ -18,14 +18,14 @@ public class SecurityConfig {
         List<String> urlPattern1 = new ArrayList<String>();
 
         urlPattern1.add("/userInfo");
-        urlPattern1.add("/userTask");
+        //urlPattern1.add("/userTask");
 
         mapConfig.put(ROLE_USER, urlPattern1);
 
         List<String> urlPattern2 = new ArrayList<String>();
 
         urlPattern2.add("/userInfo");
-        urlPattern2.add("/AdminTask");
+        //urlPattern2.add("/adminTask");
 
         mapConfig.put(ROLE_ADMIN, urlPattern2);
     }
