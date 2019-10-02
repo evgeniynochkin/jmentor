@@ -4,8 +4,8 @@ import java.util.*;
 
 public class SecurityConfig {
 
-    public static final String ROLE_USER = "User";
-    public static final String ROLE_ADMIN = "Admin";
+    public static final String ROLE_USER = "user";
+    public static final String ROLE_ADMIN = "admin";
 
     private static final Map<String, List<String>> mapConfig = new HashMap<String, List<String>>();
 
@@ -18,14 +18,15 @@ public class SecurityConfig {
         List<String> urlPattern1 = new ArrayList<String>();
 
         urlPattern1.add("/userInfo");
-        //urlPattern1.add("/userTask");
+        urlPattern1.add("/userListUser");
 
         mapConfig.put(ROLE_USER, urlPattern1);
 
         List<String> urlPattern2 = new ArrayList<String>();
 
         urlPattern2.add("/userInfo");
-        //urlPattern2.add("/adminTask");
+        urlPattern2.add("/userListUser");
+        urlPattern2.add("/adminListUsers");
 
         mapConfig.put(ROLE_ADMIN, urlPattern2);
     }

@@ -15,8 +15,12 @@
     Вход
 </a>
 ||
-<a href="${pageContext.request.contextPath}/userList">
-    Список пользователей
+<a href="${pageContext.request.contextPath}/userListUsers">
+    Список пользователей (Пользователь)
+</a>
+||
+<a href="${pageContext.request.contextPath}/adminListUsers">
+    Список пользователей (Админ)
 </a>
 ||
 <a href="${pageContext.request.contextPath}/logout">
