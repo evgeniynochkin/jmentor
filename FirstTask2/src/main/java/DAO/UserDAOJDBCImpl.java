@@ -77,6 +77,7 @@ public class UserDAOJDBCImpl implements UserDAO {
             uds.setLogin(resultSet.getString("login"));
             uds.setPassword(resultSet.getString("password"));
             uds.setName(resultSet.getString("name"));
+            uds.setRole(resultSet.getString("role"));
         }
 
         resultSet.close();
