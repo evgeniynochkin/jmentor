@@ -7,13 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/UserInfoServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/AppUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AppUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/StartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/StartServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Start.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Start.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/userInfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/userInfoView.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -482,7 +479,9 @@
       <workItem from="1569429359180" duration="5618000" />
       <workItem from="1569512649951" duration="599000" />
       <workItem from="1569666659585" duration="599000" />
-      <workItem from="1569751438852" duration="7918000" />
+      <workItem from="1569751438852" duration="8695000" />
+      <workItem from="1569847072570" duration="1788000" />
+      <workItem from="1569987987636" duration="1955000" />
     </task>
     <task id="LOCAL-00001" summary="New Task One 21/05/2019-1100">
       <created>1558423242276</created>
@@ -764,7 +763,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569434371427</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="NewTask2 29.09.19">
+      <created>1569785309545</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1569785309545</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -784,7 +790,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="NewTask2 03.07.19" />
     <MESSAGE value="NewTask2 07.07.19" />
     <MESSAGE value="NewTask2 10.07.19" />
     <MESSAGE value="NewTask2 11.07.19" />
@@ -809,7 +814,8 @@
     <MESSAGE value="NewTask2 18.09.19 (6)" />
     <MESSAGE value="NewTask2 23.09.19" />
     <MESSAGE value="NewTask2 25.09.19" />
-    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 25.09.19" />
+    <MESSAGE value="NewTask2 29.09.19" />
+    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 29.09.19" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

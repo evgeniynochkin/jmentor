@@ -14,9 +14,9 @@
 <body>
     <jsp:include page="Menu.jsp"></jsp:include>
 
-    <h3>Привет: ${loginedUser.userName}</h3>
+    <h3>Привет: ${loginedUser.login}</h3>
 
-    Имя пользователя: <b>${loginedUser.userName}</b>
+    Имя пользователя: <b>${loginedUser.name}</b>
     <br />
     Права: ${loginedUser.role} <br />
 </body>

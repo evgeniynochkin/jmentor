@@ -53,16 +53,16 @@ public class LoginServlet extends HttpServlet {
 
         AppUtils.storeLoginedUser(request.getSession(), uds);
 
-        int redirectId = -1;
-        try {
-            redirectId = Integer.parseInt(request.getParameter("redirectId"));
-        } catch (Exception e) {
-            throw new ServletException(e);
-        }
-
-        String requestUri = AppUtils.getRedirectAfterLoginUrl(request.getSession(), redirectId);
-        if (requestUri != null) {
+//        int redirectId = -1;
+//        try {
+//            redirectId = Integer.parseInt(request.getParameter("redirectId"));
+//        } catch (Exception e) {
+//            throw new ServletException(e);
+//        }
+//
+//        String requestUri = AppUtils.getRedirectAfterLoginUrl(request.getSession(), redirectId);
+//        if (requestUri != null) {
             response.sendRedirect(request.getContextPath() + "/userInfo");
-        }
+//        }
     }
 }
