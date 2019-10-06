@@ -8,14 +8,17 @@ import java.util.Map;
 
 public class UrlPatternUtils {
 
+    //
     private static boolean hasUrlPattern(ServletContext servletContext, String urlPattern) {
 
+        //Список доступных адресов
         Map<String, ? extends ServletRegistration> map = servletContext.getServletRegistrations();
 
         for (String servletName : map.keySet()) {
-            ServletRegistration sr = map.get(servletName);
 
+            ServletRegistration sr = map.get(servletName);
             Collection<String> mappings = sr.getMappings();
+            //Проверка наличия адреса urlPattern в списке адресов
             if (mappings.contains(urlPattern)) {
                 return true;
             }
@@ -23,16 +26,21 @@ public class UrlPatternUtils {
         return false;
     }
 
+    //
     public static String getUrlPattern(HttpServletRequest request) {
+
         ServletContext servletContext = request.getServletContext();
         String servletPath = request.getServletPath();
         String pathInfo = request.getPathInfo();
 
         String urlPattern = null;
+
+        //
         if (pathInfo != null) {
             urlPattern = servletPath + "/*";
             return urlPattern;
         }
+
         urlPattern = servletPath;
 
         boolean has = hasUrlPattern(servletContext, urlPattern);

@@ -41,9 +41,8 @@ public class SecurityFilter implements Filter {
             return;
         }
 
-        HttpServletRequest wrapRequest = request;
-
         //Если пользователь уже вошел
+        HttpServletRequest wrapRequest = request;
         if (uds != null) {
 
             String userName = uds.getName();
@@ -52,14 +51,16 @@ public class SecurityFilter implements Filter {
             wrapRequest = new UserRoleRequestWrapper(userName, userRole, request);
         }
 
-        //
+        //Проверка страниц с ограниченным доступом
         if (SecurityUtils.isSecurityPage(request)) {
 
+            //Перенаправление на страницу входа, если не вошел
             if (uds == null) {
                 response.sendRedirect(wrapRequest.getContextPath() + "/login");
                 return;
             }
 
+            //Проверка доступа пользователя
             boolean hasPermission = SecurityUtils.hasPermission(wrapRequest);
             if (!hasPermission) {
                 RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/accessDenied.jsp");

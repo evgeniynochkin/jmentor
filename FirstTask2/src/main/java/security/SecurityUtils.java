@@ -8,6 +8,7 @@ import java.util.Set;
 
 public class SecurityUtils {
 
+    //Проверка
     public static boolean isSecurityPage(HttpServletRequest request) {
 
         String urlPattern = UrlPatternUtils.getUrlPattern(request);
@@ -23,6 +24,7 @@ public class SecurityUtils {
         return false;
     }
 
+    //Проверка доступа
     public static boolean hasPermission(HttpServletRequest request) {
 
         String urlPattern = UrlPatternUtils.getUrlPattern(request);

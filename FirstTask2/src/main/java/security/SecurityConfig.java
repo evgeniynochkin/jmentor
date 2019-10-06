@@ -13,6 +13,7 @@ public class SecurityConfig {
         initial();
     }
 
+    //Создает список достиупов по ролям
     private static void initial() {
 
         List<String> urlPattern1 = new ArrayList<String>();
@@ -35,6 +36,7 @@ public class SecurityConfig {
         return mapConfig.keySet();
     }
 
+    //Возвращает адреса доступов по роли
     public static List<String> getUrlPatternsForRole(String role) {
         return mapConfig.get(role);
     }
