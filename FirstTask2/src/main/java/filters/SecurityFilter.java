@@ -1,4 +1,4 @@
-package servlet;
+package filters;
 
 import model.UserDataSet;
 import security.SecurityUtils;

@@ -29,6 +29,7 @@ public class SecurityUtils {
 
         String urlPattern = UrlPatternUtils.getUrlPattern(request);
 
+
         Set<String> allRoles = SecurityConfig.getAllAppRules();
 
         for (String role : allRoles) {

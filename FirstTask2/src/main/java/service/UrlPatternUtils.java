@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class UrlPatternUtils {
 
-    //
+    //Проверка регистрации сервлета
     private static boolean hasUrlPattern(ServletContext servletContext, String urlPattern) {
 
         //Список доступных адресов
@@ -26,7 +26,7 @@ public class UrlPatternUtils {
         return false;
     }
 
-    //
+    //Получение
     public static String getUrlPattern(HttpServletRequest request) {
 
         ServletContext servletContext = request.getServletContext();
@@ -47,6 +47,7 @@ public class UrlPatternUtils {
         if (has) {
             return urlPattern;
         }
+
         int i = servletPath.lastIndexOf('.');
         if (i != -1) {
             String ext = servletPath.substring(i + 1);
