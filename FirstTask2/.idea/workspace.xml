@@ -8,12 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/filters/AdminFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filters/AdminFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/filters/SecurityFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/security/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/security/SecurityUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UrlPatternUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserRoleRequestWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filters/RegisterFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filters/RegisterFilter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,10 +136,10 @@
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.34439024" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.ChangelistConflict" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -495,7 +492,7 @@
       <workItem from="1569987987636" duration="9269000" />
       <workItem from="1570368664121" duration="7134000" />
       <workItem from="1571133610027" duration="5403000" />
-      <workItem from="1571211603010" duration="5500000" />
+      <workItem from="1571211603010" duration="7307000" />
     </task>
     <task id="LOCAL-00001" summary="New Task One 21/05/2019-1100">
       <created>1558423242276</created>
@@ -833,7 +830,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571233041671</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="NewTask2 16.10.19 (3)">
+      <created>1571233833787</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1571233833787</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -853,7 +857,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="NewTask2 18.08.19 12-00" />
     <MESSAGE value="NewTask2 18.08.19 13-00" />
     <MESSAGE value="NewTask2 31.08.19" />
     <MESSAGE value="NewTask2 01.09.19" />
@@ -878,7 +881,8 @@
     <MESSAGE value="NewTask2 15.10.19" />
     <MESSAGE value="NewTask2 16.10.19" />
     <MESSAGE value="NewTask2 16.10.19 (2)" />
-    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 16.10.19 (2)" />
+    <MESSAGE value="NewTask2 16.10.19 (3)" />
+    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 16.10.19 (3)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

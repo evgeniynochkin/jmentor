@@ -13,9 +13,6 @@ import java.io.IOException;
 public class RegisterFilter implements Filter {
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {    }
-
-    @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
             throws IOException, ServletException {
 
@@ -43,7 +40,4 @@ public class RegisterFilter implements Filter {
 
         filterChain.doFilter(request, response);
     }
-
-    @Override
-    public void destroy() {    }
 }
