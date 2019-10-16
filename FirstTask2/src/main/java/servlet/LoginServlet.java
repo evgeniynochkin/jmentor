@@ -2,7 +2,6 @@ package servlet;
 
 import exception.DBException;
 import model.UserDataSet;
-import service.AppUtils;
 import service.UserServiceImpl;
 
 import javax.servlet.RequestDispatcher;
@@ -51,7 +50,7 @@ public class LoginServlet extends HttpServlet {
             throw new ServletException(e);
         }
 
-        AppUtils.storeLoginedUser(request.getSession(), uds);
+        request.getSession().setAttribute("loginedUser", uds);
 
         response.sendRedirect(request.getContextPath() + "/userInfo");
     }

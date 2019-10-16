@@ -1,7 +1,6 @@
 package filters;
 
 import model.UserDataSet;
-import service.AppUtils;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -24,7 +23,7 @@ public class RegisterFilter implements Filter {
         String servletPath = request.getServletPath();
 
         //Получаем пользователя сессии
-        uds = AppUtils.getLoginedUser(request.getSession());
+        uds = (UserDataSet) request.getSession().getAttribute("loginedUser");
 
         //Если страница входа
         if (servletPath.equals("/login")) {

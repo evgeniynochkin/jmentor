@@ -1,7 +1,6 @@
 package filters;
 
 import model.UserDataSet;
-import service.AppUtils;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -21,10 +20,8 @@ public class AdminFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
-        String servletPath = request.getServletPath();
-
         //Получаем пользователя сессии
-        uds = AppUtils.getLoginedUser(request.getSession());
+        uds = (UserDataSet) request.getSession().getAttribute("loginedUser");
 
         //Если пользователь еще не вошел
         if (uds == null) {
