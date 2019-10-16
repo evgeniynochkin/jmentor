@@ -29,6 +29,12 @@ public class AdminFilter implements Filter {
         //Получаем пользователя сессии
         uds = AppUtils.getLoginedUser(request.getSession());
 
+        //Если пользователь еще не вошел
+        if (uds == null) {
+            response.sendRedirect(request.getContextPath() + "/login");
+            return;
+        }
+
         //Проверка доступа
         if (!uds.getRole().equals("admin")) {
             RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/accessDenied.jsp");
