@@ -40,6 +40,8 @@ public class RegisterFilter implements Filter {
             response.sendRedirect(request.getContextPath() + "/login");
             return;
         }
+
+        filterChain.doFilter(request, response);
     }
 
     @Override

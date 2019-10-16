@@ -46,4 +46,5 @@ public class ServletAdminRole extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/adminListUsers.jsp");
         dispatcher.forward(request, response);
     }
+
 }

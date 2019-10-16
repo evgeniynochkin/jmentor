@@ -4,13 +4,14 @@ import model.UserDataSet;
 import service.AppUtils;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebServlet;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/adminListUsers")
+@WebFilter("/adminListUsers")
 public class AdminFilter implements Filter {
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {    }
 
@@ -35,6 +36,8 @@ public class AdminFilter implements Filter {
             dispatcher.forward(request, response);
             return;
         }
+
+        filterChain.doFilter(request, response);
     }
 
     @Override
