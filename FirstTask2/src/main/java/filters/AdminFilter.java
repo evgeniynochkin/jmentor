@@ -1,15 +1,22 @@
 package filters;
 
+import exception.DBException;
 import model.UserDataSet;
+import service.UserService;
+import service.UserServiceImpl;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
 
 @WebFilter("/adminListUsers")
 public class AdminFilter implements Filter {
+
+    private UserService usi = new UserServiceImpl();
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)

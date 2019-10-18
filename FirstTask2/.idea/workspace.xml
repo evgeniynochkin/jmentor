@@ -7,10 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/filters/AdminFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filters/AdminFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/filters/RegisterFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filters/RegisterFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/AppUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AppUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -492,14 +490,9 @@
       <workItem from="1569987987636" duration="9269000" />
       <workItem from="1570368664121" duration="7134000" />
       <workItem from="1571133610027" duration="5403000" />
-      <workItem from="1571211603010" duration="7572000" />
-    </task>
-    <task id="LOCAL-00002" summary="New Task One 21/05/2019-1900">
-      <created>1558454861980</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1558454861980</updated>
+      <workItem from="1571211603010" duration="12977000" />
+      <workItem from="1571310087994" duration="2557000" />
+      <workItem from="1571386900519" duration="514000" />
     </task>
     <task id="LOCAL-00003" summary="New Task One 21/05/2019-1930">
       <created>1558456233012</created>
@@ -837,7 +830,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571237105026</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="NewTask2 16.10.19 (5)">
+      <created>1571237468187</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1571237468187</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -857,7 +857,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="NewTask2 31.08.19" />
     <MESSAGE value="NewTask2 01.09.19" />
     <MESSAGE value="NewTask2 02.09.19" />
     <MESSAGE value="NewTask2 15.09.19" />
@@ -882,7 +881,8 @@
     <MESSAGE value="NewTask2 16.10.19 (2)" />
     <MESSAGE value="NewTask2 16.10.19 (3)" />
     <MESSAGE value="NewTask2 16.10.19 (4)" />
-    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 16.10.19 (4)" />
+    <MESSAGE value="NewTask2 16.10.19 (5)" />
+    <option name="LAST_COMMIT_MESSAGE" value="NewTask2 16.10.19 (5)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
