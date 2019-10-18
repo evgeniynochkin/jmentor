@@ -10,8 +10,6 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.List;
 
 @WebFilter("/adminListUsers")
 public class AdminFilter implements Filter {
@@ -37,13 +35,14 @@ public class AdminFilter implements Filter {
         }
 
         //Проверка доступа
-        if (!uds.getRole().equals("admin")) {
-            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/accessDenied.jsp");
-
-            dispatcher.forward(request, response);
+        if (uds.getRole().equals("admin")) {
+            response.sendRedirect(request.getContextPath() + "/adminListUsers");
+            return;
+        } else {
+            response.sendRedirect(request.getContextPath() + "/accessDenied.jsp");
             return;
         }
 
-        filterChain.doFilter(request, response);
+//        filterChain.doFilter(request, response);
     }
 }
