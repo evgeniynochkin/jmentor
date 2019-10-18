@@ -36,7 +36,7 @@ public class AdminFilter implements Filter {
 
         //Проверка доступа
         if (uds.getRole().equals("admin")) {
-            response.sendRedirect(request.getContextPath() + "/adminListUsers");
+            response.sendRedirect(request.getContextPath() + "/adminListUsers.jsp");
             return;
         } else {
             response.sendRedirect(request.getContextPath() + "/accessDenied.jsp");

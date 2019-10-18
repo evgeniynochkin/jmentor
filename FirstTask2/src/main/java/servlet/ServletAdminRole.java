@@ -38,13 +38,12 @@ public class ServletAdminRole extends HttpServlet {
             throw new ServletException(ex);
         }
 
-        showNewForm(request, response);
+//        showNewForm(request, response);
     }
-
-    private void showNewForm(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/adminListUsers.jsp");
-        dispatcher.forward(request, response);
-    }
-
+//
+//    private void showNewForm(HttpServletRequest request, HttpServletResponse response)
+//            throws ServletException, IOException {
+//        RequestDispatcher dispatcher = request.getRequestDispatcher("/adminListUsers.jsp");
+//        dispatcher.forward(request, response);
+//    }
 }
