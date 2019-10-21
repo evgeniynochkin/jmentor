@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet({"/","/login"})
+@WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 
     public UserDataSet uds;
@@ -52,6 +52,6 @@ public class LoginServlet extends HttpServlet {
 
         request.getSession().setAttribute("loginedUser", uds);
 
-        response.sendRedirect(request.getContextPath() + "/userInfo");
+        response.sendRedirect(request.getContextPath() + "/Start.jsp");
     }
 }

@@ -2,8 +2,6 @@ package filters;
 
 import exception.DBException;
 import model.UserDataSet;
-import service.UserService;
-import service.UserServiceImpl;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -13,8 +11,6 @@ import java.io.IOException;
 
 @WebFilter("/adminListUsers")
 public class AdminFilter implements Filter {
-
-    private UserService usi = new UserServiceImpl();
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
@@ -28,21 +24,13 @@ public class AdminFilter implements Filter {
         //Получаем пользователя сессии
         uds = (UserDataSet) request.getSession().getAttribute("loginedUser");
 
-        //Если пользователь еще не вошел
-        if (uds == null) {
+        //Проверка доступа
+        if (uds.getRole().equals("admin")) {
+            filterChain.doFilter(request, response);
+            return;
+        } else {
             response.sendRedirect(request.getContextPath() + "/login");
             return;
         }
-
-        //Проверка доступа
-        if (uds.getRole().equals("admin")) {
-            response.sendRedirect(request.getContextPath() + "/adminListUsers.jsp");
-            return;
-        } else {
-            response.sendRedirect(request.getContextPath() + "/accessDenied.jsp");
-            return;
-        }
-
-//        filterChain.doFilter(request, response);
     }
 }

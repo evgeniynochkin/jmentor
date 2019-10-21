@@ -7,8 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/filters/AdminFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filters/AdminFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filters/RegisterFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filters/LoginedFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ServletAdminRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ServletAdminRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Start.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Start.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminListUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adminListUsers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/userListUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/userListUsers.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -492,14 +498,10 @@
       <workItem from="1571133610027" duration="5403000" />
       <workItem from="1571211603010" duration="12977000" />
       <workItem from="1571310087994" duration="2557000" />
-      <workItem from="1571386900519" duration="5805000" />
-    </task>
-    <task id="LOCAL-00005" summary="NewTask2 28.05.19-1500">
-      <created>1559070199222</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1559070199222</updated>
+      <workItem from="1571386900519" duration="12812000" />
+      <workItem from="1571472592014" duration="6638000" />
+      <workItem from="1571550361141" duration="3202000" />
+      <workItem from="1571641238668" duration="2832000" />
     </task>
     <task id="LOCAL-00006" summary="NewTask2 06.06.19">
       <created>1559846652748</created>
@@ -837,7 +839,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571408785813</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="NewTask2 18.10.19 (2)">
+      <created>1571408903050</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1571408903050</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -901,6 +910,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/DAO/UserDAOHibernateImpl.java</url>
           <line>69</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/filters/LoginedFilter.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/Start.jsp</url>
+          <line>18</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/filters/LoginedFilter.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

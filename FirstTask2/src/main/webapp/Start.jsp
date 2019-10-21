@@ -13,7 +13,6 @@
 </head>
 <body>
 <center>
-    <jsp:include page="Menu.jsp"></jsp:include>
     <h1>Введите данные</h1>
 </center>
 <div align="center">

@@ -14,7 +14,6 @@
 <body>
     <center>
         <h1>Пользователи</h1>
-        <jsp:include page="Menu.jsp"></jsp:include>
         <h2>
             <a href="${pageContext.servletContext.contextPath}/useraction/insert">Новый пользователь</a>
         </h2>

@@ -14,7 +14,6 @@
 <body>
     <center>
         <h1>Пользователи</h1>
-        <jsp:include page="Menu.jsp"></jsp:include>
     </center>
     <div aling="center">
         <table border="1" cellpadding="5">
