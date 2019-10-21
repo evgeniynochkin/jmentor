@@ -1,6 +1,5 @@
 package filters;
 
-import exception.DBException;
 import model.UserDataSet;
 
 import javax.servlet.*;
@@ -24,13 +23,18 @@ public class AdminFilter implements Filter {
         //Получаем пользователя сессии
         uds = (UserDataSet) request.getSession().getAttribute("loginedUser");
 
-        //Проверка доступа
-        if (uds.getRole().equals("admin")) {
-            filterChain.doFilter(request, response);
-            return;
-        } else {
+        if (uds == null) {
             response.sendRedirect(request.getContextPath() + "/login");
             return;
+        } else {
+            //Проверка доступа
+            if (uds.getRole().equals("admin")) {
+                filterChain.doFilter(request, response);
+                return;
+            } else {
+                response.sendRedirect(request.getContextPath() + "/login");
+                return;
+            }
         }
     }
 }
