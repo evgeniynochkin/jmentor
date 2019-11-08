@@ -7,74 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/artifacts/springtask_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/artifacts/springtask_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Hibernate_5_4_5_5_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__javax_servlet_jsp_javax_servlet_jsp_api_2_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__jstl_jstl_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_postgresql_postgresql_42_2_1_jre7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_springframework_spring_orm_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/libraries/Maven__org_springframework_spring_tx_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/FastInfoset-1.2.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/antlr-2.7.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/byte-buddy-1.9.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/classmate-1.3.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/dom4j-2.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/hibernate-commons-annotations-5.1.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/hibernate-core-5.4.5.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/istack-commons-runtime-3.0.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/jandex-2.0.5.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/javassist-3.24.0-GA.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/javax.activation-api-1.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/javax.persistence-api-2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/jaxb-api-2.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/jaxb-runtime-2.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/jboss-logging-3.3.2.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/stax-ex-1.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/lib/txw2-2.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/springtask.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/DAO/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/DAO/UserDAOHibernateImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/DAO/UserDAOJDBCImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/config/FrontControllerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/config/SpringWebAppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/controllers/StartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/model/UserDataSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/service/DBMakeCon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springtask/web/WEB-INF/welcome.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springtask/src/main/java/config/FrontControllerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springtask/src/main/java/spring/config/FrontControllerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springtask/src/main/java/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springtask/src/main/java/spring/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springtask/src/main/java/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springtask/src/main/java/spring/controllers/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springtask/web/WEB-INF/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../springtask/web/WEB-INF/pages/welcome.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +127,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springtask" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -565,6 +502,7 @@
       <workItem from="1572679353947" duration="326000" />
       <workItem from="1572679754977" duration="1050000" />
       <workItem from="1572855386041" duration="4549000" />
+      <workItem from="1573223813388" duration="342000" />
     </task>
     <task id="LOCAL-00008" summary="NewTask2 19.06.19">
       <created>1560964866649</created>
