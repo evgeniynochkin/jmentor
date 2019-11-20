@@ -7,11 +7,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61173ab1-1642-4aef-bb99-4f8184c3bda0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/DAO/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/DAO/UserDAOHibernateImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/DAO/UserDAOJDBCImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/exceptions/DBException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/factories/ChooseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/factories/UserDAOFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/factories/UserDAOHibernateFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/factories/UserDAOJDBCFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/model/UserDataSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/service/DBMakeCon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/spring/config/RootConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/java/spring/controllers/CRUDController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/src/main/recources/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/web/WEB-INF/pages/EditUserForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtask/web/WEB-INF/pages/NewUserForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/springtest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/src/main/java/spring/config/FrontControllerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/src/main/java/spring/config/RootConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/src/main/java/spring/config/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/src/main/java/spring/controllers/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/target/classes/spring/config/FrontControllerConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/target/classes/spring/config/RootConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/target/classes/spring/config/WebMvcConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/target/classes/spring/controllers/HomeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/target/springtest.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/target/springtest/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/target/springtest/WEB-INF/classes/spring/config/FrontControllerConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/target/springtest/WEB-INF/classes/spring/config/RootConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/target/springtest/WEB-INF/classes/spring/config/WebMvcConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/target/springtest/WEB-INF/classes/spring/controllers/HomeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springtest/target/springtest/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springtask/src/main/java/config/FrontControllerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springtask/src/main/java/spring/config/FrontControllerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springtask/src/main/java/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springtask/src/main/java/spring/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springtask/src/main/java/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springtask/src/main/java/spring/controllers/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springtask/web/WEB-INF/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../springtask/web/WEB-INF/pages/welcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springtask/springtask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../springtask/springtask.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springtask/src/main/java/spring/config/FrontControllerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springtask/src/main/java/spring/config/FrontControllerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springtask/src/main/java/spring/controllers/FirstController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springtask/src/main/java/spring/controllers/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springtask/web/WEB-INF/pages/firstpage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springtask/web/WEB-INF/pages/welcome.jsp" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,6 +163,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="h2&#10;cassandra&#10;postgresql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -137,7 +180,7 @@
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.34439024" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.ChangelistConflict" />
@@ -503,6 +546,12 @@
       <workItem from="1572679754977" duration="1050000" />
       <workItem from="1572855386041" duration="4549000" />
       <workItem from="1573223813388" duration="342000" />
+      <workItem from="1573388824878" duration="66000" />
+      <workItem from="1573390293506" duration="683000" />
+      <workItem from="1573488932549" duration="4603000" />
+      <workItem from="1573660206246" duration="1238000" />
+      <workItem from="1573904088860" duration="599000" />
+      <workItem from="1573983470087" duration="99000" />
     </task>
     <task id="LOCAL-00008" summary="NewTask2 19.06.19">
       <created>1560964866649</created>
@@ -898,11 +947,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/servlet/useraction/UserAddServlet.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DAO/UserDAOHibernateImpl.java</url>
           <line>80</line>
           <option name="timeStamp" value="11" />
@@ -916,11 +960,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/filters/LoginedFilter.java</url>
           <line>40</line>
           <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/webapp/Start.jsp</url>
-          <line>18</line>
-          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/filters/LoginedFilter.java</url>
