@@ -11,7 +11,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableWebMvc
-//@ComponentScan("")
+@ComponentScan
 public class WebMvcConfig implements WebMvcConfigurer {
 
     @Bean
