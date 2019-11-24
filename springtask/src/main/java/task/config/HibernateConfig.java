@@ -1,4 +1,4 @@
-package config;
+package task.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -15,9 +15,9 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@ComponentScan
+@ComponentScan(basePackages = ("task"))
 @EnableTransactionManagement
-@PropertySource(value = "classpath:config.properties")
+@PropertySource("classpath:db.properties")
 public class HibernateConfig {
     private Environment environment;
 

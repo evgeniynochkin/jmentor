@@ -1,14 +1,15 @@
-package service;
+package task.DAO;
 
-import model.UserDataSet;
+import task.model.UserDataSet;
+
 import java.util.List;
 
-public interface UserService {
+public interface UserDAO {
 
     public void addUser(UserDataSet uds);
     public void updateUser(UserDataSet uds);
     public void removeUser(int id);
     public UserDataSet getUserByLogin(String login);
     public UserDataSet getUserById(Integer id);
-    public List<UserDataSet> findAllUsers();
+    public List<UserDataSet> findAll();
 }

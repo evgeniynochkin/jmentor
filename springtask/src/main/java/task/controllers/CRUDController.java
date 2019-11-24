@@ -1,14 +1,14 @@
-package controllers;
+package task.controllers;
 
-import model.UserDataSet;
+import task.model.UserDataSet;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import service.UserService;
-import service.UserServiceImpl;
+import task.service.UserService;
+import task.service.UserServiceImpl;
 
 import java.util.List;
 import java.util.Map;

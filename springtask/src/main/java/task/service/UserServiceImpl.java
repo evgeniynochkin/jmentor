@@ -1,7 +1,7 @@
-package service;
+package task.service;
 
-import DAO.UserDAO;
-import model.UserDataSet;
+import task.DAO.UserDAO;
+import task.model.UserDataSet;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
