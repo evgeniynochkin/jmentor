@@ -1,5 +1,7 @@
 package task.DAO;
 
+import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
 import task.model.UserDataSet;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -7,12 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
+@Repository
 public class UserDAOImpl implements UserDAO {
     private SessionFactory sessionFactory;
 
     @Autowired
-    public void setSessionFactory(SessionFactory sf) {
-        this.sessionFactory = sf;
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
     }
 
     @Override
@@ -48,11 +51,12 @@ public class UserDAOImpl implements UserDAO {
         return uds;
     }
 
-    @SuppressWarnings("unchecked")
     @Override
+    @SuppressWarnings("unchecked")
     public List<UserDataSet> findAll() {
         Session session = this.sessionFactory.getCurrentSession();
-        List<UserDataSet> users = session.createQuery("from Users").list();
+        Query query = session.createQuery("FROM " + UserDataSet.class);
+        List<UserDataSet> users = query.list();
         return users;
     }
 }

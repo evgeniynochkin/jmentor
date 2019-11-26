@@ -1,5 +1,6 @@
 package task.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import task.model.UserDataSet;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,14 +17,22 @@ import java.util.Map;
 @Controller
 public class CRUDController {
 
-    private UserService usi = new UserServiceImpl();
+    private UserService usi;
+
+    @Autowired
+    public void setUsi(UserService usi) {
+        this.usi = usi;
+    }
 
     @RequestMapping("/")
-    public ModelAndView home() {
-        ModelAndView mv = new ModelAndView("index");
-        List<UserDataSet> uList = usi.findAllUsers();
-        mv.addObject("usersList", uList);
-        return mv;
+//    public ModelAndView allUsers() {
+//        ModelAndView mv = new ModelAndView("index");
+//        List<UserDataSet> uList = usi.findAllUsers();
+//        mv.addObject("usersList", uList);
+//        return mv;
+//    }
+    public String getIndex() {
+        return "index";
     }
 
     @RequestMapping("/insert")
