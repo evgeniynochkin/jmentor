@@ -1,16 +1,15 @@
 package task.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import task.model.UserDataSet;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import task.service.UserService;
 import task.service.UserServiceImpl;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
@@ -25,14 +24,11 @@ public class CRUDController {
     }
 
     @RequestMapping("/")
-//    public ModelAndView allUsers() {
-//        ModelAndView mv = new ModelAndView("index");
-//        List<UserDataSet> uList = usi.findAllUsers();
-//        mv.addObject("usersList", uList);
-//        return mv;
-//    }
-    public String getIndex() {
-        return "index";
+    public ModelAndView allUsers() {
+        ModelAndView mv = new ModelAndView("index");
+        List<UserDataSet> uList = usi.findAllUsers();
+        mv.addObject("usersList", uList);
+        return mv;
     }
 
     @RequestMapping("/insert")
@@ -42,13 +38,21 @@ public class CRUDController {
         return "NewUserForm";
     }
 
-    @RequestMapping("/edit")
-    public ModelAndView editUser(@RequestParam int id) {
-        ModelAndView mv = new ModelAndView("EditUserForm");
+    @RequestMapping(value = "/edit", method = RequestMethod.GET)
+    public ModelAndView editPage(HttpServletRequest request) {
+        int id = Integer.parseInt(request.getParameter("id"));
         UserDataSet uds = usi.getUserById(id);
-        uds.setRole("user");
+        ModelAndView mv = new ModelAndView("EditUserForm");
         mv.addObject("user", uds);
         return mv;
+    }
+
+    @RequestMapping(value = "/edit", method = RequestMethod.POST)
+    public ModelAndView editUser(@ModelAttribute("user") UserDataSet uds) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("redirect:/");
+        usi.updateUser(uds);
+        return modelAndView;
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)

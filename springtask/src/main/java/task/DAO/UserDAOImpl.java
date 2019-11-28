@@ -55,7 +55,7 @@ public class UserDAOImpl implements UserDAO {
     @SuppressWarnings("unchecked")
     public List<UserDataSet> findAll() {
         Session session = this.sessionFactory.getCurrentSession();
-        Query query = session.createQuery("FROM " + UserDataSet.class);
+        Query query = session.createQuery("FROM UserDataSet", UserDataSet.class);
         List<UserDataSet> users = query.list();
         return users;
     }

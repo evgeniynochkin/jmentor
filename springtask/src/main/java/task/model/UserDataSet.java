@@ -2,8 +2,8 @@ package task.model;
 
 import javax.persistence.*;
 
-@Entity
-@Table (name = "users")
+@Entity (name = "UserDataSet")
+@Table (name = "UserDataSet")
 public class UserDataSet {
 
     @Id

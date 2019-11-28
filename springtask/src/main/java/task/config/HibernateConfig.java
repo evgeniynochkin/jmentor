@@ -49,6 +49,7 @@ public class HibernateConfig {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
+        sessionFactory.setPackagesToScan("task.model");
         sessionFactory.setHibernateProperties(hibiranateProperties());
         return sessionFactory;
     }
