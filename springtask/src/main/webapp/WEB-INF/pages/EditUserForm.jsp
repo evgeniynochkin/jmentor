@@ -26,7 +26,7 @@
     </center>
     <div align="center">
         <form:form action="save" method="post" modelAttribute="user">
-            <table border="1" cellpadding="4">
+            <table border="1" cellpadding="5">
                 <caption>
                     <h2>Edit User</h2>
                 </caption>
@@ -52,6 +52,12 @@
                     <th>Name: </th>
                     <td>
                         <form:input path="name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Role: </th>
+                    <td>
+                        <form:input path="role"/>
                     </td>
                 </tr>
                 <tr>
