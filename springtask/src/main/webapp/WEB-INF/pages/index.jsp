@@ -26,15 +26,15 @@
       <th>Логин</th>
       <th>Имя</th>
     </tr>
-    <c:forEach var="users" items="${usersList}">
+    <c:forEach var="user" items="${usersList}">
       <tr>
-        <td><c:out value="${users.id}" /></td>
-        <td><c:out value="${users.login}" /></td>
-        <td><c:out value="${users.name}" /></td>
+        <td><c:out value="${user.id}" /></td>
+        <td><c:out value="${user.login}" /></td>
+        <td><c:out value="${user.name}" /></td>
         <td>
-          <a href="/springtask_war/edit?id=${users.id}">Редактировать</a>
+          <a href="/springtask_war/edit?id=${user.id}">Редактировать</a>
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="/springtask_war/delete?id=${users.id}">Удалить</a>
+          <a href="/springtask_war/delete?id=${user.id}">Удалить</a>
         </td>
       </tr>
     </c:forEach>

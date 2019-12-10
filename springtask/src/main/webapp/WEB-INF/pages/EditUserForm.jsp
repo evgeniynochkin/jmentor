@@ -7,6 +7,7 @@
 --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="th" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -25,14 +26,14 @@
         </h3>
     </center>
     <div align="center">
-        <form:form action="save" method="post" modelAttribute="user">
-            <table border="1" cellpadding="5">
+        <form:form action="/save" method="post" modelAttribute="user">
+            <table border="0" cellpadding="5">
                 <caption>
                     <h2>Edit User</h2>
                 </caption>
                 <tr>
                     <th>ID: </th>
-                    <td>${user.id}
+                    <td>
                         <form:hidden path="id"/>
                     </td>
                 </tr>
@@ -42,24 +43,24 @@
                         <form:input path="login"/>
                     </td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <th>Password: </th>
                     <td>
-                        <form:input path="password"/>
+                        <input path="password"/>
                     </td>
                 </tr>
                 <tr>
                     <th>Name: </th>
                     <td>
-                        <form:input path="name"/>
+                        <input path="name"/>
                     </td>
                 </tr>
                 <tr>
                     <th>Role: </th>
                     <td>
-                        <form:input path="role"/>
+                        <input path="role"/>
                     </td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td colspan="2" align="center">
                         <input type="submit" value="Save" />
