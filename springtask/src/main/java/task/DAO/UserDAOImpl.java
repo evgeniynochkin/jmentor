@@ -31,9 +31,9 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public void removeUser(int id) {
+    public void removeUser(long id) {
         Session session = this.sessionFactory.getCurrentSession();
-        UserDataSet uds = (UserDataSet) session.load(UserDataSet.class, new Integer(id));
+        UserDataSet uds = (UserDataSet) session.load(UserDataSet.class, new Long(id));
         if (null != uds) { session.delete(uds); }
     }
 
@@ -45,9 +45,9 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public UserDataSet getUserById(Integer id) {
+    public UserDataSet getUserById(long id) {
         Session session = this.sessionFactory.getCurrentSession();
-        UserDataSet uds = (UserDataSet) session.load(UserDataSet.class, new Integer(id));
+        UserDataSet uds = (UserDataSet) session.load(UserDataSet.class, new Long(id));
         return uds;
     }
 

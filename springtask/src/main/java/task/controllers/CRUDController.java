@@ -39,19 +39,20 @@ public class CRUDController {
     @RequestMapping(value = "/edit", method = RequestMethod.GET)
     public ModelAndView editPage(HttpServletRequest request) {
         int id = Integer.parseInt(request.getParameter("id"));
-        UserDataSet user = usi.getUserById(id);
+        UserDataSet user = new UserDataSet();
+        user = usi.getUserById(id);
         ModelAndView mv = new ModelAndView("EditUserForm");
         mv.addObject("user", user);
         return mv;
     }
 
-    @RequestMapping(value = "/edit", method = RequestMethod.POST)
-    public ModelAndView editUser(@ModelAttribute("user") UserDataSet user) {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("redirect:/");
-        usi.updateUser(user);
-        return modelAndView;
-    }
+//    @RequestMapping(value = "/edit", method = RequestMethod.POST)
+//    public ModelAndView editUser(@ModelAttribute("user") UserDataSet user) {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.setViewName("redirect:/");
+//        usi.updateUser(user);
+//        return modelAndView;
+//    }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String saveUser(@ModelAttribute("user") UserDataSet user) {

@@ -8,7 +8,7 @@ public class UserDataSet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @Column (name = "name", unique = true)
     private String name;
@@ -24,7 +24,21 @@ public class UserDataSet {
 
     public UserDataSet() {}
 
-    public void setId(Integer id) { this.id = id; }
+    public UserDataSet(String login, String password) {
+        this.name = login;
+        this.login = login;
+        this.password = password;
+        this.role = "user";
+    }
+
+    public UserDataSet(String name, String login, String password, String role) {
+        this.name = name;
+        this.login = login;
+        this.password = password;
+        this.role = role;
+    }
+
+    public void setId(long id) { this.id = id; }
 
     public void setName(String name) { this.name = name; }
 
@@ -34,7 +48,7 @@ public class UserDataSet {
 
     public void setRole(String role) { this.role = role; }
 
-    public int getId() { return id; }
+    public long getId() { return id; }
 
     public String getName() { return name; }
 
