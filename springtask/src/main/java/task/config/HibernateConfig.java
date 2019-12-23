@@ -7,8 +7,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.hibernate5.HibernateTransactionManager;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.JpaVendorAdapter;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
@@ -19,6 +21,7 @@ import java.util.Properties;
 @EnableTransactionManagement
 @PropertySource("classpath:db.properties")
 public class HibernateConfig {
+
     private Environment environment;
 
     @Autowired
@@ -26,10 +29,30 @@ public class HibernateConfig {
         this.environment = environment;
     }
 
+
+    @Bean
+    public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean() {
+        LocalContainerEntityManagerFactoryBean lCEM = new LocalContainerEntityManagerFactoryBean();
+        lCEM.setDataSource(dataSource());
+        lCEM.setPackagesToScan("task.model");
+        JpaVendorAdapter jva = new HibernateJpaVendorAdapter();
+        lCEM.setJpaVendorAdapter(jva);
+        lCEM.setJpaProperties(hibiranateProperties());
+        return lCEM;
+    }
+
+    @Bean
+    public JpaTransactionManager transactionManager() {
+        JpaTransactionManager transactionManager = new JpaTransactionManager();
+        transactionManager.setEntityManagerFactory(entityManagerFactoryBean().getObject());
+        return transactionManager;
+    }
+
     private Properties hibiranateProperties() {
         Properties properties = new Properties();
         properties.put("hibertate.dialect", environment.getRequiredProperty("hib.dialect"));
         properties.put("hibernate.show_sql", environment.getRequiredProperty("hib.show_sql"));
+        properties.put("hibernate.hbm2dll_auto", environment.getRequiredProperty("hib.hbm2dllauto"));
         return properties;
     }
 
@@ -43,21 +66,5 @@ public class HibernateConfig {
         dataSource.setPassword(environment.getRequiredProperty("db.password"));
 
         return dataSource;
-    }
-
-    @Bean
-    public LocalSessionFactoryBean sessionFactory() {
-        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
-        sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("task.model");
-        sessionFactory.setHibernateProperties(hibiranateProperties());
-        return sessionFactory;
-    }
-
-    @Bean
-    public HibernateTransactionManager transactionManager() {
-        HibernateTransactionManager transactionManager = new HibernateTransactionManager();
-        transactionManager.setSessionFactory(sessionFactory().getObject());
-        return transactionManager;
     }
 }

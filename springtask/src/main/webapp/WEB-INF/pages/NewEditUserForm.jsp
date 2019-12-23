@@ -7,6 +7,7 @@
 --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="th" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -15,37 +16,41 @@
 <body>
     <center>
         <h1>User Manager</h1>
-        <h3>
-            <c:if test="${uds == null}">
-                <a href="/springtask_war/">Вход </a>
-            </c:if>
-            <c:if test="${uds != null}">
-                <a/springtask_war href="/springtask_war/">Список пользователей</a>
-            </c:if>
-        </h3>
     </center>
     <div align="center">
-        <form:form action="save" method="post" modelAttribute="user">
-            <table border="1" cellpadding="4">
+        <form:form action="newedit" method="post" modelAttribute="user">
+            <table border="0" cellpadding="5">
                 <caption>
-                    <h2>Add New User</h2>
+                    <h2>Edit User</h2>
                 </caption>
+                <tr>
+                    <th>ID: </th>
+                    <td>
+                        <form:hidden path="id"/>
+                    </td>
+                </tr>
                 <tr>
                     <th>Login: </th>
                     <td>
-                        <input type="text" name="login" size="45" value="" />
+                        <form:input path="login"/>
                     </td>
                 </tr>
                 <tr>
                     <th>Password: </th>
                     <td>
-                        <input type="text" name="password" size="45" value="" />
+                        <form:input path="password"/>
                     </td>
                 </tr>
                 <tr>
                     <th>Name: </th>
                     <td>
-                        <input type="text" name="name" size="45" value="" />
+                        <form:input path="name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Role: </th>
+                    <td>
+                        <form:input path="role"/>
                     </td>
                 </tr>
                 <tr>

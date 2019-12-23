@@ -37,19 +37,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional
     public UserDataSet getUserByLogin(String login) {
         return this.getUserByLogin(login);
     }
 
     @Override
-    @Transactional
     public UserDataSet getUserById(long id) {
         return this.userDAO.getUserById(id);
     }
 
     @Override
-    @Transactional
     public List<UserDataSet> findAllUsers() {
         return this.userDAO.findAll();
     }

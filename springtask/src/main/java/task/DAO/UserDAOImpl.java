@@ -1,62 +1,49 @@
 package task.DAO;
 
-import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 import task.model.UserDataSet;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
 public class UserDAOImpl implements UserDAO {
-    private SessionFactory sessionFactory;
 
-    @Autowired
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
+    @PersistenceContext
+    private EntityManager entityManager;
 
     @Override
+    @Transactional
     public void addUser(UserDataSet uds) {
-        Session session = this.sessionFactory.getCurrentSession();
-        session.persist(uds);
+        entityManager.persist(uds);
     }
 
     @Override
     public void updateUser(UserDataSet uds) {
-        Session session = this.sessionFactory.getCurrentSession();
-        session.update(uds);
+        entityManager.merge(uds);
     }
 
     @Override
     public void removeUser(long id) {
-        Session session = this.sessionFactory.getCurrentSession();
-        UserDataSet uds = (UserDataSet) session.load(UserDataSet.class, new Long(id));
-        if (null != uds) { session.delete(uds); }
+        entityManager.remove(getUserById(id));
     }
 
     @Override
     public UserDataSet getUserByLogin(String fLogin) {
-        Session session = this.sessionFactory.getCurrentSession();
-        UserDataSet uds = (UserDataSet) session.load(UserDataSet.class, new String(fLogin));
-        return uds;
+        return (UserDataSet) entityManager.find(UserDataSet.class, fLogin);
     }
 
     @Override
     public UserDataSet getUserById(long id) {
-        Session session = this.sessionFactory.getCurrentSession();
-        UserDataSet uds = (UserDataSet) session.load(UserDataSet.class, new Long(id));
-        return uds;
+        return (UserDataSet) entityManager.find(UserDataSet.class, id);
     }
 
     @Override
     @SuppressWarnings("unchecked")
     public List<UserDataSet> findAll() {
-        Session session = this.sessionFactory.getCurrentSession();
-        Query query = session.createQuery("FROM UserDataSet", UserDataSet.class);
-        List<UserDataSet> users = query.list();
-        return users;
+        Query query = entityManager.createQuery("FROM UserDataSet", UserDataSet.class);
+        return query.getResultList();
     }
 }
