@@ -5,39 +5,40 @@
   Time: 10:31
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
   <title>Authorization</title>
 </head>
+
 <body>
 <center>
   <h1>Пользователи</h1>
   <h2>
     <a href="/springtask_war/insert">Новый пользователь</a>
   </h2>
+    <!--/*@thymesVar id="message" type="java"*/-->
+    <p th:text="${message}">Mes</p>
 </center>
 <div aling="center">
   <table border="1" cellpadding="5">
     <caption><h2>Список пользователей</h2></caption>
     <tr>
       <th>ID</th>
-      <th>Логин</th>
-      <th>Имя</th>
+      <th>Login</th>
+      <th>Name</th>
     </tr>
-    <c:forEach var="user" items="${usersList}">
-      <tr>
-        <td><c:out value="${user.id}" /></td>
-        <td><c:out value="${user.login}" /></td>
-        <td><c:out value="${user.name}" /></td>
+    <tr th:each = "user : ${usersList}">
+        <td th:text="${user.id}">ID</td>
+        <td th:text="${user.login}">Login</td>
+        <td th:text="${user.name}">Name</td>
         <td>
           <a href="/springtask_war/edit?id=${user.id}">Редактировать</a>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <a href="/springtask_war/delete?id=${user.id}">Удалить</a>
         </td>
-      </tr>
-    </c:forEach>
+    </tr>
   </table>
 </div>
 </body>
