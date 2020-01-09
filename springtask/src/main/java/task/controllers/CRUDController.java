@@ -16,12 +16,12 @@ import java.util.Map;
 @Controller
 public class CRUDController {
 
-    private UserService usi;
+//    private UserService usi;
 
-    @Autowired
-    public void setUsi(UserService usi) {
-        this.usi = usi;
-    }
+//    @Autowired
+//    public void setUsi(UserService usi) {
+//        this.usi = usi;
+//    }
 
     @GetMapping(value = {"/"})
     public String viewHomePage(Model model){
