@@ -14,11 +14,11 @@
 
 <body>
 <center>
-  <h1>Пользователи</h1>
+  <h1>Пользователи JSP</h1>
   <h2>
     <a href="/springtask_war/insert">Новый пользователь</a>
   </h2>
-    <!--/*@thymesVar id="message" type="java"*/-->
+    <!--/*@thymesVar id="message" type="java.lang.String"*/-->
     <p th:text="${message}">Mes</p>
 </center>
 <div aling="center">
