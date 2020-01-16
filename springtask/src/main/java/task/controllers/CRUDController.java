@@ -13,21 +13,21 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
-@Controller
+@RestController
 public class CRUDController {
 
-//    private UserService usi;
+    private UserService usi;
 
-//    @Autowired
-//    public void setUsi(UserService usi) {
-//        this.usi = usi;
-//    }
+    @Autowired
+    public void setUsi(UserService usi) {
+        this.usi = usi;
+    }
 
     @GetMapping(value = {"/"})
     public String viewHomePage(Model model){
-//        List<UserDataSet> uList = usi.findAllUsers();
-//        model.addAttribute("usersList", uList);
-        model.addAttribute("message", "This work");
+        List<UserDataSet> uList = usi.findAllUsers();
+        model.addAttribute("usersList", uList);
+//        model.addAttribute("message", "This work");
         return "index";
     }
 
