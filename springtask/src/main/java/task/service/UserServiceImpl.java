@@ -24,7 +24,6 @@ public class UserServiceImpl implements UserService{
         repository.deleteById(id);
     }
 
-
     public UserDataSet getUserById(long id) {
         return repository.findById(id).get();
     }

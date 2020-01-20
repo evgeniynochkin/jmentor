@@ -39,7 +39,7 @@ public class CRUDController {
         return "redirect:/";
     }
 
-    @RequestMapping("/edit{id}")
+    @RequestMapping("/edit/{id}")
     public ModelAndView editUser(@PathVariable(name = "id") long id) {
         ModelAndView mav = new ModelAndView("NewEditUserForm");
         UserDataSet usd = usi.getUserById(id);
