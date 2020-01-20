@@ -7,13 +7,9 @@ import task.model.UserDataSet;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 import task.service.UserService;
-import task.service.UserServiceImpl;
-
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
-import java.util.Map;
 
-@RestController
+@Controller
 public class CRUDController {
 
     private UserService usi;
@@ -23,45 +19,37 @@ public class CRUDController {
         this.usi = usi;
     }
 
-    @GetMapping(value = {"/"})
+    @RequestMapping(value = {"/", "/index"})
     public String viewHomePage(Model model){
         List<UserDataSet> uList = usi.findAllUsers();
         model.addAttribute("usersList", uList);
-//        model.addAttribute("message", "This work");
         return "index";
     }
 
-//    @RequestMapping("/insert")
-//    public String addUser(Map<String, Object> model) {
-//        UserDataSet uds = new UserDataSet();
-//        model.put("user", uds);
-//        return "NewEditUserForm";
-//    }
-//
-//    @RequestMapping(value = "/edit", method = RequestMethod.GET)
-//    public ModelAndView editPage(HttpServletRequest request) {
-//        Long id = Long.parseLong(request.getParameter("id"));
-//        UserDataSet user = new UserDataSet();
-//        user = usi.getUserById(id);
-//        ModelAndView mv = new ModelAndView("NewEditUserForm");
-//        mv.addObject("user", user);
-//        return mv;
-//    }
-//
-//    @RequestMapping(value = "/newedit", method = RequestMethod.POST)
-//    public String saveUser(@ModelAttribute("user") UserDataSet user) {
-//        if (user.getId() != 0) {
-//            usi.updateUser(user);
-//        } else {
-//            user.setRole("user");
-//            usi.addUser(user);
-//        }
-//        return "redirect:/";
-//    }
-//
-//    @RequestMapping("/delete")
-//    public String removeUser(@ModelAttribute("user") UserDataSet uds) {
-//        usi.removeUser(uds.getId());
-//        return "redirect:/";
-//    }
+    @RequestMapping("/insert")
+    public String addUser(Model model) {
+        UserDataSet uds = new UserDataSet();
+        model.addAttribute("user", uds);
+        return "NewEditUserForm";
+    }
+
+    @RequestMapping("/save")
+    public String saveUser(@ModelAttribute("user") UserDataSet uds)  {
+        usi.addUser(uds);
+        return "redirect:/";
+    }
+
+    @RequestMapping("/edit{id}")
+    public ModelAndView editUser(@PathVariable(name = "id") long id) {
+        ModelAndView mav = new ModelAndView("NewEditUserForm");
+        UserDataSet usd = usi.getUserById(id);
+        mav.addObject("user", usd);
+        return mav;
+    }
+
+    @RequestMapping("/delete/{id}")
+    public String deleteUser(@PathVariable(name = "id") long id) {
+        usi.removeUser(id);
+        return "redirect:/";
+    }
 }

@@ -7,5 +7,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5433/postgres</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="springtask@localhost" uuid="7f149c48-3cdc-453d-9459-0095883cd525">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/springtask</jdbc-url>
+    </data-source>
   </component>
 </project>

@@ -3,7 +3,7 @@ package task.model;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "UserDataSet")
+@Table (name = "userslist", schema="public")
 public class UserDataSet {
 
     @Id

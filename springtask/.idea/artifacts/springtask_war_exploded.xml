@@ -93,6 +93,7 @@
           <element id="library" level="project" name="Maven: org.jvnet.staxex:stax-ex:1.8.1" />
           <element id="library" level="project" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.16" />
           <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.1.jre7" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.18" />
         </element>
       </element>
       <element id="directory" name="META-INF">
