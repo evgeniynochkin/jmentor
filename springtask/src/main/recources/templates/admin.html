@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+
+<head>
+  <title>List users</title>
+</head>
+
+<body>
+<center>
+  <h1>Пользователи</h1>
+  <h2>
+    <a href="/admin/insert">Новый пользователь</a>
+  </h2>
+</center>
+<div aling="center">
+  <table border="1" cellpadding="5">
+    <caption><h2>Список пользователей</h2></caption>
+      <thead>
+        <tr>
+            <th>ID</th>
+            <th>Login</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each = "user : ${usersList}">
+            <td th:text="${user.id}">ID</td>
+            <td th:text="${user.login}">Login</td>
+            <td th:text="${user.username}">Name</td>
+            <td>
+            <a th:href="@{'/admin/edit/' + ${user.id}}">Редактировать</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            <a th:href="@{'/admin/delete/' + ${user.id}}">Удалить</a>
+            </td>
+        </tr>
+      </tbody>
+  </table>
+
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sing out">
+    </form>
+</div>
+</body>
+</html>

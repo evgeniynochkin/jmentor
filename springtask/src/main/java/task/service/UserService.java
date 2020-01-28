@@ -6,10 +6,10 @@ import java.util.Optional;
 
 public interface UserService {
 
-    public void addUser(UserDataSet uds);
+    public boolean saveUser(UserDataSet uds);
 //    public void updateUser(UserDataSet uds);
     public void removeUser(long id);
-//    public UserDataSet getUserByLogin(String login);
+    public UserDataSet findUserDataSetByLogin(String login);
     public UserDataSet getUserById(long id);
     public List<UserDataSet> findAllUsers();
 }
