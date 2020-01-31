@@ -26,8 +26,8 @@ public class UserServiceImpl implements UserDetailsService {
     @Autowired
     RoleRepository roleRepository;
 
-    @Autowired
-    BCryptPasswordEncoder bCryptPasswordEncoder;
+//    @Autowired
+//    BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public boolean saveUser(UserDataSet uds) {
         UserDataSet udsNew = udsRepository.findUserDataSetByLogin(uds.getLogin());
@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserDetailsService {
         }
 
         uds.setRole(Collections.singleton(new Role(1L, "ROLE_USER")));
-        uds.setPassword(bCryptPasswordEncoder.encode(uds.getPassword()));
+//        uds.setPassword(bCryptPasswordEncoder.encode(uds.getPassword()));
         udsRepository.save(uds);
         return true;
     }
