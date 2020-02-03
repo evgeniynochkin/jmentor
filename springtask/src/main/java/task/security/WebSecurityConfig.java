@@ -26,6 +26,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+//                .csrf().disable()
                 .authorizeRequests()
                 //Доступ для не зарегистрированных пользователей
                 .antMatchers("/registration").not().fullyAuthenticated()
