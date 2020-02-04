@@ -4,17 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import task.DAO.RoleRepository;
 import task.DAO.UserDataSetRepository;
-import task.model.Role;
 import task.model.UserDataSet;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 @Service
 @Transactional
@@ -22,9 +17,6 @@ public class UserServiceImpl implements UserDetailsService {
 
     @Autowired
     UserDataSetRepository udsRepository;
-
-    @Autowired
-    RoleRepository roleRepository;
 
 //    @Autowired
 //    BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -36,7 +28,8 @@ public class UserServiceImpl implements UserDetailsService {
             return false;
         }
 
-        uds.setRole(Collections.singleton(new Role(1L, "ROLE_USER")));
+        uds.setRole("USER");
+//        uds.setRole(Collections.singleton(new Role(1L, "USER")));
 //        uds.setPassword(bCryptPasswordEncoder.encode(uds.getPassword()));
         udsRepository.save(uds);
         return true;

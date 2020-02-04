@@ -1,7 +1,6 @@
 package task.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -19,7 +18,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private UserServiceImpl usi;
 
     @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+    protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(usi).passwordEncoder(NoOpPasswordEncoder.getInstance());
     }
 
@@ -30,12 +29,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 //Доступ для не зарегистрированных пользователей
                 .antMatchers("/registration").not().fullyAuthenticated()
-                //Доступ для всех пользователей
-                .antMatchers("/", "/index").permitAll()
                 //Доступ для зарегистрированных пользователей
-                .antMatchers("/news").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')")
+//                .antMatchers("/news").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')")
+                .antMatchers("/news").access("hasAnyRole('ROLE_USER')")
+//                .antMatchers("/news").hasRole("USER")
+//                .antMatchers("/news").hasRole("ADMIN")
                 //Доступ для админа
-                .antMatchers("/admin").access("hasAnyRole('ROLE_ADMIN')")
+//                .antMatchers("/admin").access("hasAnyRole('ROLE_ADMIN')")
+                //Доступ для всех пользователей
+                .antMatchers("/", "/index","/error").permitAll()
                 .anyRequest().authenticated();
         http
                 .formLogin()

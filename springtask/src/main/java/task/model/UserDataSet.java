@@ -14,6 +14,7 @@ public class UserDataSet implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "user_id")
     private long id;
 
     @Column (name = "username", unique = true)
@@ -32,8 +33,8 @@ public class UserDataSet implements UserDetails {
     @Transient
     private String passwordConfirm;
 
-    @ManyToMany (fetch=FetchType.EAGER)
-    private Set<Role> roles;
+    @Column
+    private String role;
 
     public UserDataSet() {}
 
@@ -45,7 +46,7 @@ public class UserDataSet implements UserDetails {
 
     public void setPassword(String password) { this.password = password; }
 
-    public void setRole(Set<Role> roles) { this.roles = roles; }
+    public void setRole(String role) { this.role = role; }
 
     public void setPasswordConfirm(String passwordConfirm) { this.passwordConfirm = passwordConfirm; }
 
@@ -53,7 +54,7 @@ public class UserDataSet implements UserDetails {
 
     public String getLogin() { return login; }
 
-    public Set<Role> getRoles() { return roles; }
+    public String getRole() { return role; }
 
     public String getPasswordConfirm() { return passwordConfirm; }
 
@@ -86,7 +87,7 @@ public class UserDataSet implements UserDetails {
                 ", username='" + username + '\'' +
                 ", login='" + login + '\'' +
                 ", password=" + password +
-                ", role=" + roles +
+                ", role=" + role +
                 '}';
     }
 }
