@@ -34,7 +34,8 @@ public class UserDataSet implements UserDetails {
     private String passwordConfirm;
 
     @Column
-    private String role;
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Set<Role> roles;
 
     public UserDataSet() {}
 
@@ -46,7 +47,7 @@ public class UserDataSet implements UserDetails {
 
     public void setPassword(String password) { this.password = password; }
 
-    public void setRole(String role) { this.role = role; }
+    public void setRoles(Set<Role> roles) { this.roles = roles; }
 
     public void setPasswordConfirm(String passwordConfirm) { this.passwordConfirm = passwordConfirm; }
 
@@ -54,7 +55,7 @@ public class UserDataSet implements UserDetails {
 
     public String getLogin() { return login; }
 
-    public String getRole() { return role; }
+    public Set<Role> getRoles() { return roles; }
 
     public String getPasswordConfirm() { return passwordConfirm; }
 
@@ -87,7 +88,7 @@ public class UserDataSet implements UserDetails {
                 ", username='" + username + '\'' +
                 ", login='" + login + '\'' +
                 ", password=" + password +
-                ", role=" + role +
+//                ", role=" + roles +
                 '}';
     }
 }
