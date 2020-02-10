@@ -6,6 +6,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -34,8 +35,11 @@ public class UserDataSet implements UserDetails {
     private String passwordConfirm;
 
     @Column
-    @ManyToMany(fetch = FetchType.EAGER)
-    private Set<Role> roles;
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinTable(name="userlist_roles",
+            joinColumns = @JoinColumn(name = "user_data_set_user_id"),
+            inverseJoinColumns = @JoinColumn(name = "roles_role_id"))
+    private Set<Role> roles = new HashSet<>();
 
     public UserDataSet() {}
 
