@@ -16,9 +16,8 @@ public class Role implements GrantedAuthority {
     @Column(name = "role")
     private String role;
 
-    @Transient
-
-    private Set<UserDataSet> users;
+//    @Transient
+//    private Set<UserDataSet> users;
 
     public Role() {}
 
@@ -35,13 +34,13 @@ public class Role implements GrantedAuthority {
 
     public void setRole(String role) { this.role = role; }
 
-    public void setUsers(Set<UserDataSet> users) { this.users = users; }
+//    public void setUsers(Set<UserDataSet> users) { this.users = users; }
 
     public Long getId() { return id; }
 
     public String getRole() { return role; }
 
-    public Set<UserDataSet> getUsers() { return users; }
+//    public Set<UserDataSet> getUsers() { return users; }
 
     @Override
     public String getAuthority() { return role; }

@@ -35,7 +35,7 @@ public class UserDataSet implements UserDetails {
     private String passwordConfirm;
 
     @Column
-    @OneToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name="userlist_roles",
             joinColumns = @JoinColumn(name = "user_data_set_user_id"),
             inverseJoinColumns = @JoinColumn(name = "roles_role_id"))

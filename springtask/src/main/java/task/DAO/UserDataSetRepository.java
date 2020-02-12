@@ -9,6 +9,5 @@ import task.model.UserDataSet;
 public interface UserDataSetRepository extends JpaRepository<UserDataSet, Long> {
 
     UserDataSet findUserDataSetByLogin(String login);
-    
     UserDataSet findByUsername(String username);
 }
