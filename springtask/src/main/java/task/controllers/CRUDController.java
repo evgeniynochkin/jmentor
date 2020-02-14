@@ -1,6 +1,8 @@
 package task.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import task.model.UserDataSet;
@@ -22,8 +24,8 @@ public class CRUDController {
 
     @RequestMapping(value = {"/", "/index"})
     public String viewHomePage(Model model){
-        //List<UserDataSet> uList = usi.findAllUsers();
-        //model.addAttribute("usersList", uList);
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        UserDataSet uds = (UserDataSet) auth.getPrincipal();
         return "index";
     }
 
