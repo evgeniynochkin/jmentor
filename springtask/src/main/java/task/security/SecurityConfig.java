@@ -27,21 +27,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-//                .httpBasic()
-//                .and()
-//                .csrf().disable()
+            .authorizeRequests().antMatchers("/news").access("hasAnyRole('ROLE_USER')");
+        http
                 .authorizeRequests()
                 //Доступ для не зарегистрированных пользователей
                 .antMatchers("/registration").not().fullyAuthenticated()
-                //Доступ для зарегистрированных пользователей
-//                .antMatchers("/news").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')")
-                .antMatchers("/news").access("hasAnyRole('ROLE_USER')")
-//                .antMatchers("/news").hasRole("USER")
-//                .antMatchers("/news").hasRole("ADMIN")
-                //Доступ для админа
-//                .antMatchers("/admin").access("hasAnyRole('ROLE_ADMIN')")
-                //Доступ для всех пользователей
-                .antMatchers("/", "/index","/error").permitAll()
+                .antMatchers("/", "/index","/error", "/admin").permitAll()
                 .anyRequest().authenticated();
         http
                 .formLogin()
