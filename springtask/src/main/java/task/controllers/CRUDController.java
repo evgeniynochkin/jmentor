@@ -24,8 +24,8 @@ public class CRUDController {
 
     @RequestMapping(value = {"/", "/index"})
     public String viewHomePage(Model model){
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        UserDataSet uds = (UserDataSet) auth.getPrincipal();
+//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//        UserDataSet uds = (UserDataSet) auth.getPrincipal();
         return "index";
     }
 

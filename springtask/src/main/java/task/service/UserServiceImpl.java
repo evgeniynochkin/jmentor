@@ -67,11 +67,15 @@ public class UserServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
         UserDataSet uds = udsRepository.findByUsername(name);
+        MyUserDetails userDetails = null;
 
-        if (uds == null) {
+        if (uds != null) {
+            userDetails = new MyUserDetails();
+            userDetails.setUser(uds);
+        } else {
             throw new UsernameNotFoundException("User not found");
         }
 
-        return uds;
+        return userDetails;
     }
 }
