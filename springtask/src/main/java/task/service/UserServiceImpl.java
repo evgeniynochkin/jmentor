@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.PersistenceContext;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -34,8 +35,9 @@ public class UserServiceImpl implements UserDetailsService {
             return false;
         }
 
-        uds.setRoles(Collections.singleton(new Role(1L, "ROLE_USER")));
-//        uds.setPassword(bCryptPasswordEncoder.encode(uds.getPassword()));
+        Set<Role> roles = new HashSet<>();
+        roles.add(roleRepository.getOne(1L));
+        uds.setRoles(roles);
         udsRepository.save(uds);
         return true;
     }

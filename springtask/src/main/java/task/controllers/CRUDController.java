@@ -1,16 +1,12 @@
 package task.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import task.model.UserDataSet;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 import task.service.UserServiceImpl;
-
-import java.util.List;
 
 @Controller
 public class CRUDController {
@@ -24,8 +20,6 @@ public class CRUDController {
 
     @RequestMapping(value = {"/", "/index"})
     public String viewHomePage(Model model){
-//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-//        UserDataSet uds = (UserDataSet) auth.getPrincipal();
         return "index";
     }
 
