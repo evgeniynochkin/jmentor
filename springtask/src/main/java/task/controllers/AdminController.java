@@ -1,6 +1,9 @@
 package task.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import task.model.UserDataSet;
@@ -22,6 +25,11 @@ public class AdminController {
 
     @RequestMapping(value = {"/", "/index"})
     public String viewHomePage(Model model){
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if ((!(auth instanceof AnonymousAuthenticationToken)) && auth != null) {
+            UserDataSet loguser = (UserDataSet) auth.getPrincipal();
+            model.addAttribute("userlogined", loguser);
+        }
         return "index";
     }
 
