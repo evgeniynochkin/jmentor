@@ -12,41 +12,7 @@
 </head>
 
 <body>
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">Springtask</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Войти</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/registration">Регистрация</a>
-                </li>
-            </ul>
-            <div sec:authorize="hasRole('ROLE_USER')">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/news">Новости</a>
-                    </li>
-                </ul>
-            </div>
-            <div sec:authorize="hasRole('ROLE_ADMIN')">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin">Пользователи</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
+    <div th:insert="~{fragments/navbar :: navbar}"></div>
 
     <div class="container mt-3">
             <h1>Пользователи</h1>
@@ -73,9 +39,9 @@
                     <td th:text="${user.login}">Login</td>
                     <td th:text="${user.username}">Name</td>
                     <td>
-                        <a th:href="@{'/admin/edit/' + ${user.id}}">Редактировать</a>
+                        <a class="btn btn-primary" th:href="@{'/admin/edit/' + ${user.id}}" role="button">Редактировать</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a th:href="@{'/admin/delete/' + ${user.id}}">Удалить</a>
+                        <a class="btn btn-primary" th:href="@{'/admin/delete/' + ${user.id}}" role="button">Удалить</a>
                     </td>
                 </tr>
             </tbody>
