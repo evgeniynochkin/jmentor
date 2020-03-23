@@ -25,6 +25,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private UserServiceImpl usi;
 
     @Autowired
+    CustomizeAuthenticationSuccessHandler customizeAuthenticationSuccessHandler;
+
+    @Autowired
     protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(usi);
     }
@@ -32,11 +35,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/", "/index").permitAll()
+//                .antMatchers("/", "/index").permitAll()
                 .antMatchers("/news/**").access("hasAuthority('ROLE_USER')")
-                .antMatchers("/adminpage/**", "/news/**").access("hasAuthority('ROLE_ADMIN')");
-        http
+                .antMatchers("/adminpage/**", "/news/**").access("hasAuthority('ROLE_ADMIN')")
+                .and()
                 .formLogin()
+                .successHandler(customizeAuthenticationSuccessHandler)
                 .loginPage("/login")
                 .defaultSuccessUrl("/")
                 .permitAll()
