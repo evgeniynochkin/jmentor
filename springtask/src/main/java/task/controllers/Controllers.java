@@ -31,12 +31,12 @@ public class Controllers {
         if ((!(auth instanceof AnonymousAuthenticationToken)) && auth != null) {
             UserDataSet loguser = (UserDataSet) auth.getPrincipal();
             model.addAttribute("userlogined", loguser);
-            return "adminpage";
+//            return "adminpage";
         }
         return "login";
     }
 
-    @RequestMapping(value = "/login")
+    @GetMapping(value = "/login")
     public ModelAndView login() {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("login");
