@@ -25,16 +25,16 @@ public class Controllers {
         this.usi = usi;
     }
 
-    @RequestMapping(value = {"/", "/index"})
-    public String viewHomePage(Model model){
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if ((!(auth instanceof AnonymousAuthenticationToken)) && auth != null) {
-            UserDataSet loguser = (UserDataSet) auth.getPrincipal();
-            model.addAttribute("userlogined", loguser);
-//            return "adminpage";
-        }
-        return "login";
-    }
+//    @RequestMapping(value = {"/", "/index"})
+//    public String viewHomePage(Model model){
+//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//        if ((!(auth instanceof AnonymousAuthenticationToken)) && auth != null) {
+//            UserDataSet loguser = (UserDataSet) auth.getPrincipal();
+//            model.addAttribute("userlogined", loguser);
+////            return "adminpage";
+//        }
+//        return "login";
+//    }
 
     @GetMapping(value = "/login")
     public ModelAndView login() {

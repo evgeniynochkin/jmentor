@@ -1,8 +1,13 @@
 package task.security;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
+import org.springframework.security.web.DefaultRedirectStrategy;
+import org.springframework.security.web.RedirectStrategy;
+import org.springframework.security.web.WebAttributes;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 import task.model.UserDataSet;
@@ -10,38 +15,69 @@ import task.model.UserDataSet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.Iterator;
 
 @Component
 public class CustomizeAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
+
+    private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request,
                                         HttpServletResponse response, Authentication authentication)
             throws IOException, ServletException {
 
-//        response.setStatus(HttpServletResponse.SC_OK);
+        handle(request, response, authentication);
+        clearAuthenticationAttributes(request);
+    }
 
-        User principal = (User) authentication.getPrincipal();
+    protected void handle(HttpServletRequest request,
+                          HttpServletResponse response, Authentication authentication)
+            throws IOException {
+
+        String targetUrl = determineTargetUrl(authentication);
+
+        redirectStrategy.sendRedirect(request, response, targetUrl);
+    }
+
+    protected String determineTargetUrl(Authentication authentication) {
+        boolean isUser = false;
         boolean isAdmin = false;
-        Iterator<GrantedAuthority> grantedAuthorityIterator = principal.getAuthorities().iterator();
-        while (grantedAuthorityIterator.hasNext()) {
-            if (grantedAuthorityIterator.next().getAuthority().equalsIgnoreCase("ROLE_ADMIN")) {
+        Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
+        for (GrantedAuthority grantedAuthority : authorities) {
+            if (grantedAuthority.getAuthority().equals("ROLE__USER")) {
+                isUser = true;
+                break;
+            } else if (grantedAuthority.getAuthority().equals("ROLE__ADMIN")) {
                 isAdmin = true;
+                break;
             }
         }
 
-//        for (GrantedAuthority auth : authentication.getAuthorities()) {
-//            if ("ROLE_ADMIN".equals(auth.getAuthority())){
-//                isAdmin = true;
-//            }
-//        }
-
-        if(isAdmin){
-            response.sendRedirect("/adminpage");
-        }else{
-            response.sendRedirect("/user");
+        if (isUser) {
+            return "/adminpage.html";
+        } else if (isAdmin) {
+            return "/adminpage.html";
+        } else {
+            throw new IllegalStateException();
         }
+    }
+
+    protected void clearAuthenticationAttributes(HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+        if (session == null) {
+            return;
+        }
+        session.removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
+    }
+
+    public void setRedirectStrategy(RedirectStrategy redirectStrategy) {
+        this.redirectStrategy = redirectStrategy;
+    }
+    protected RedirectStrategy getRedirectStrategy() {
+        return redirectStrategy;
     }
 }
